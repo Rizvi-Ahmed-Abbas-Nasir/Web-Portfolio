@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* :root{
+    --
+}
+
+.lightMode{
+
+}
+ */
+
+.Header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    z-index: 0;
+    background-color: black;
+    width: 100%;
+    height: 5vh;
+    align-items: center;
+    
+}
+.Header :first-child{
+    margin-left: 1em;
+}
+.List {
+    display: flex;
+    gap :10px;
+    margin-right: 1em;
+    align-items: center;
+    
+}
+
+li{
+    list-style: none;
+}
