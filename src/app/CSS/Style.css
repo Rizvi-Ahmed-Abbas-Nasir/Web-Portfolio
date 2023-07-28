@@ -11,7 +11,6 @@
     --background:white;
 
 
-
     /* box showdow color */
     --showdow-box:0 2px 24px 0 rgb(0 0 0 / 15%);
 }   
@@ -19,7 +18,7 @@
 /* darkMode Theme */
 .darkmode{
     --base-text-clr:white;
-    --background:black;
+    --background:#232a3a;
 
     /* box showdow color*/
     --showdow-box:0 2px 24px 0 rgba(216, 210, 210, 0.15);
@@ -45,10 +44,7 @@
     display: flex;
     align-items: center;
     margin: 2em;
-}
-.SideNAV :last-child{
-    margin-left: 1em;
-    cursor: pointer;
+    gap: 20px;
 }
 li{
     list-style: none;
@@ -68,5 +64,26 @@ li{
     z-index: 999;
     box-shadow:var(--showdow-box);
     background-color: var(--background) !important;
-    animation:  500ms ease-in-out 0s normal none 1;
+    animation:  2s ease-in-out 0s normal none 1;
+}
+.ThemeIcons{
+    margin-left: 1.0em;
+    cursor: pointer;
+    align-items: center;
+    border: solid black 1px;
+    padding: 0px 8px;
+
+    border-radius: 10px;
+}
+.ThemeIcons img{
+    margin-top:2px;
+    width: 22px;
+}
+/* Icon */
+.ThemeIcons img:hover{
+    transition: all 1s ease-in-out 0s;
+    transform: rotate(360deg);
+}
+.setligtThemeicon{
+    background-image: url("../Images/sun.png");
 }
