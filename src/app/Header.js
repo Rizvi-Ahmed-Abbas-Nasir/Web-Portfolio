@@ -1,8 +1,6 @@
 "use client"
 import { useEffect } from "react";
-// import Image from "next/image";
-// import darkThemeIcon from './Images/moon.png'
-// import LightThemeIcon from './Images/sun.png'
+
 
 export default function Header() {
 
@@ -51,20 +49,16 @@ export default function Header() {
     // Theme Toggle
     const DarkTheme = () => {
         darkMode = localStorage.getItem('darkMode');
-        const icon = document.querySelector("#themeicon");
-        const themebg = document.querySelector(".ThemeIcons")
-        console.log(icon)
+        const themeicon = document.querySelector("#themeicons")
         if(darkMode !== "enabled"){
             enableDarkTheme();
-            icon.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVvHqZcZunH_BUnLAHhLxNhA8ui3VEPI_HftAQ3t-q0u4pszLEY33ot1ZH4rat4vwfGzc&usqp=CAU"
-            icon.style.marginTop = "3px"
-            themebg.style.border = "solid white 1px"
-
+            themeicon.classList.remove("gg-moon")
+            themeicon.classList.add("gg-sun")
         }
         else{
             disableDarkTheme();
-            icon.src = "https://cdn-icons-png.flaticon.com/512/17/17768.png"
-            themebg.style.border = "solid black 1px"
+            themeicon.classList.remove("gg-sun")
+            themeicon.classList.add("gg-moon")
         }
     
     }
@@ -79,9 +73,7 @@ export default function Header() {
                     <li><h4>Portfolio</h4></li>
                     <li><h4>Contact</h4></li>
                     <div>
-                        {/* <div onClick={DarkTheme} className="ThemeIcons"> <Image id="themeicon" className="darkAndLightIcon" src={darkThemeIcon} width={20} height={20} /></div> */}
-                        <div onClick={DarkTheme} className="ThemeIcons"> <img id="themeicon" src="https://cdn-icons-png.flaticon.com/512/17/17768.png"></img></div>
-
+                        <div onClick={DarkTheme} className="ThemeIcons"> <div id="themeicons" className="gg-moon"></div></div>
                     </div>
             </div>
                 
