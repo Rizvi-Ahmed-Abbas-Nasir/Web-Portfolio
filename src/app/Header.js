@@ -64,6 +64,13 @@ export default function Header() {
     }
     // $$
 
+    //Sub-menu
+
+    const sideMenuDisplay = () => {
+        let sideSubMenu = document.querySelector(".Sub-SideNav");
+        let Hamburgericon = document.querySelector("HamBurgerIcon");
+    }
+
     return(
         <div className='Header Header-section'>
             <div className="icon"><h4>icon</h4></div>
@@ -73,8 +80,39 @@ export default function Header() {
                     <li><h4>Portfolio</h4></li>
                     <li><h4>Contact</h4></li>
                     <div>
-                        <div onClick={DarkTheme} className="ThemeIcons"> <div id="themeicons" className="gg-moon"></div></div>
+                        <div onClick={DarkTheme} className="ThemeIcons"> 
+                        <div id="themeicons" className="gg-moon"></div>
+                        </div>
                     </div>
+            </div>
+            <div className="HamBurgerIcon">
+                    <label for="check" onClick={sideMenuDisplay}>
+                        <input type="checkbox" id="check"/> 
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+            </div>
+            <div className="Sub-SideNav">
+                <div className="menuItems">
+                    <li>
+                        <h4>Home</h4>
+                    </li>
+                    <li>
+                        <h4>About</h4>
+                    </li>
+                    <li>
+                        <h4>Portfolio</h4>
+                    </li>
+                    <li>
+                        <h4>Contact</h4>
+                    </li>
+                    {/* <div>
+                        <div onClick={DarkTheme} className="ThemeIcons"> 
+                        <div id="themeicons" className="gg-moon"></div>
+                        </div>
+                    </div> */}
+                </div>
             </div>
                 
            
