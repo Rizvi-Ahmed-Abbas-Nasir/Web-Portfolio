@@ -72,6 +72,7 @@ export default function Header() {
     }
 
     return(
+        <div>
         <div className='Header Header-section'>
             <div className="icon"><h4>icon</h4></div>
             <div className="SideNAV">
@@ -93,7 +94,9 @@ export default function Header() {
                         <span></span>
                     </label>
             </div>
-            <div className="Sub-SideNav">
+            
+        </div>
+        <div className="Sub-SideNav">
                 <div className="menuItems">
                     <li>
                         <h4>Home</h4>
@@ -114,8 +117,8 @@ export default function Header() {
                     </div> */}
                 </div>
             </div>
-                
-           
+
         </div>
+        
     );
 }   
