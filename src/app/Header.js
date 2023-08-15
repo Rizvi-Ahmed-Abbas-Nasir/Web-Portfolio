@@ -1,6 +1,6 @@
 "use client"
 import { useEffect } from "react";
-
+import React, {useState} from "react";
 
 export default function Header() {
 
@@ -64,15 +64,11 @@ export default function Header() {
     }
     // $$
 
-    //Sub-menu
-
-    const sideMenuDisplay = () => {
-        let sideSubMenu = document.querySelector(".Sub-SideNav");
-        let Hamburgericon = document.querySelector("HamBurgerIcon");
-    }
-
+    //Sub-menu bar Mobile Responsive
+    const [active, setActive] = useState(false);
+    
     return(
-        <div>
+        <div className="ParentHeader">
         <div className='Header Header-section'>
             <div className="icon"><h4>icon</h4></div>
             <div className="SideNAV">
@@ -86,8 +82,8 @@ export default function Header() {
                         </div>
                     </div>
             </div>
-            <div className="HamBurgerIcon">
-                    <label for="check" onClick={sideMenuDisplay}>
+            <div className="HamBurgerIcon" onChange={() => setActive(!active)}>
+                    <label for="check">
                         <input type="checkbox" id="check"/> 
                         <span></span>
                         <span></span>
@@ -96,7 +92,7 @@ export default function Header() {
             </div>
             
         </div>
-        <div className="Sub-SideNav">
+        <div className={active ? "Sub-SideNav-on-click":"Sub-SideNav "}>
                 <div className="menuItems">
                     <li>
                         <h4>Home</h4>
@@ -117,7 +113,7 @@ export default function Header() {
                     </div> */}
                 </div>
             </div>
-
+            
         </div>
         
     );

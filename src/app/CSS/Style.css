@@ -76,7 +76,7 @@ li{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 30;
     box-shadow:var(--showdow-box);
     background-color: var(--background-Header) !important;
     animation:  2s ease-in-out 0s normal none 1;
@@ -167,7 +167,10 @@ li{
 }
 
 /* HamBurger Icon */
-
+.HamBurgerIcon{
+   
+    z-index: 30;
+}
 label{
     display:flex;
     flex-direction:column;
@@ -237,19 +240,31 @@ label{
     }
     .HamBurgerIcon{
         display: flex;
+        z-index: 30;
     }
 
     .Sub-SideNav{
-        z-index:999;
+        z-index:20;
         bottom:0.1em;
+        left: -50%;
         position: fixed;
         display: flex;
-        float: right;
         width: 50%;
         height: 100%;
         background: var(--background);
         box-shadow:var(--showdow-box);
+    }
 
+    .Sub-SideNav-on-click{
+        z-index:20;
+        bottom:0.1em;
+        left: 50%;
+        position: fixed;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background: var(--background);
+        box-shadow:var(--showdow-box);
     }
 
     
