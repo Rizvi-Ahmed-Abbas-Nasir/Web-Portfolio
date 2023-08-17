@@ -7,7 +7,7 @@
 
 /* Global Variables */
 :root{
-    --base-text-clr:black;
+    --base-text-clr:#030303;
     --background-Header:white;
     --background:white;
     --hamburgerIcon-BG-Clr:black;
@@ -19,13 +19,13 @@
 
 /* darkMode Theme */
 .darkmode{
-    --base-text-clr:white;
+    --base-text-clr:#ffffff;
     --background-Header:#232a3a;
     --background:#181c28;
     --hamburgerIcon-BG-Clr:white;
 
     /* box showdow color*/
-    --showdow-box:0 2px 24px 0 rgba(40, 40, 53, 0.15);
+    --showdow-box:0 2px 24px 0 rgba(71, 71, 73, 0.15);
 }
 
 /* Header */
@@ -38,6 +38,9 @@
     width: 100%;
     height: 2em;
     align-items: center;
+}
+.menuItems{
+    display:none;
 }
 .Sub-SideNav{
     display: none;
@@ -63,14 +66,7 @@ li{
     list-style: none;
 }
 
-.homePage{
-    width: 100%;
-    height: 150vh;
-    background-color:var(--background);
-    transition-property: background-color;
-    transition-duration: 500ms;
 
-}
 .isSticky{
     position: fixed;
     top: 0;
@@ -168,7 +164,6 @@ li{
 
 /* HamBurger Icon */
 .HamBurgerIcon{
-   
     z-index: 30;
 }
 label{
@@ -233,6 +228,29 @@ label{
 /* $$ */
 
 
+/* Home Page */
+.homePage{
+    width: 100%;
+    height: 300vh;
+    background-color:var(--background);
+    transition-property: background-color;
+    transition-duration: 500ms;
+
+}
+
+.mainPage{
+    width: 100%;
+    height: 100vh;
+}
+
+#tsparticles{
+    color: var(--base-text-clr);
+}
+
+/* $$ */
+
+
+
 /* medies quries */
 @media screen and (max-width:481px){
     .SideNAV{
@@ -246,13 +264,16 @@ label{
     .Sub-SideNav{
         z-index:20;
         bottom:0.1em;
-        left: -50%;
+        left: 100%;
         position: fixed;
         display: flex;
         width: 50%;
         height: 100%;
         background: var(--background);
         box-shadow:var(--showdow-box);
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 500ms;
     }
 
     .Sub-SideNav-on-click{
@@ -265,7 +286,20 @@ label{
         height: 100%;
         background: var(--background);
         box-shadow:var(--showdow-box);
+        transition: all ease-in 500ms;
     }
 
+    .menuItems{
+        display: flex;
+        flex-direction: column;;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--base-text-clr);
+      
+        
+       
+    }
     
 }
