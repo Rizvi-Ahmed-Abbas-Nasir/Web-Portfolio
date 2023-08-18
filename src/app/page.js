@@ -4,6 +4,9 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
+import Image from "next/image";
+import abbas from './Images/Rizvi Ahmed Abbas2.png'
+
 
 export default function Home() {
 
@@ -65,7 +68,7 @@ export default function Home() {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 1,
+                        speed: 0.4,
                         straight: false,
                     },
                     number: {
@@ -82,12 +85,23 @@ export default function Home() {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 3 },
+                        value: { min: 1, max: 2 },
                     },
                 },
                 detectRetina: true,
             }}
         /> }
+
+        <div className="frontPage">
+            <div className="myPhoto">
+                <Image className="rizvi" 
+                    src={abbas}
+                />
+
+            </div>
+
+            <div className="Descriptions"></div>
+        </div>
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 "use client"
+
 import { useEffect } from "react";
 import React, {useState} from "react";
 
@@ -70,7 +71,7 @@ export default function Header() {
     return(
         <div className="ParentHeader">
         <div className='Header Header-section'>
-            <div className="icon"><h4>icon</h4></div>
+            <div className="icon"><p>rizvi.dev</p></div>
             <div className="SideNAV">
                     <li><h4>Home</h4></li>
                     <li><h4>About</h4></li>
