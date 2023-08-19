@@ -277,15 +277,31 @@ label{
     gap: 5px;
 }
 #MyName h2{
-    font-size: 45px;
+    font-size: 55px;
+    color: var(--base-text-clr);
 }
 #Introduction{
     display: flex;
     flex-wrap: nowrap;
-    gap: 5px;
+    gap: 10px;
 }
 #Introduction p{
     font-size: 18px;
+    color: var(--base-text-clr);
+    margin-top: 1em;
+}
+#Multiples-skills-text h4{
+    font-size: 20px;
+    color: var(--base-text-clr);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+.span{
+    color: rebeccapurple;
+}
+.Descriptions{
+    /* margin-bottom: 7em; */
 }
 
 

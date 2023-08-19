@@ -1,5 +1,7 @@
 "use client"
-import { Rubik } from 'next/font/google'
+import { Lobster  } from 'next/font/google'
+import { Rokkitt  } from 'next/font/google'
+import { Oswald  } from 'next/font/google'
 import { Courgette } from 'next/font/google'
 import { useCallback } from "react";
 import Particles from "react-particles";
@@ -8,9 +10,21 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
 import Image from "next/image";
 import abbas from './Images/Rizvi Ahmed Abbas2.png'
 
-const rubik = Rubik({ 
-    subsets: ['cyrillic'],
+// Fonts Families
+const lobster  = Lobster ({ 
+    subsets: ['latin'],
     weight: ['400'] 
+})
+
+const rokkitt  = Rokkitt ({ 
+    subsets: ['latin'],
+    weight: ['200'] 
+})
+
+
+const oswald  = Oswald ({ 
+    subsets: ['latin'],
+    weight: ['200'] 
 })
 
 const courgette = Courgette({ 
@@ -18,6 +32,8 @@ const courgette = Courgette({
     weight: ['400'] 
 })
   
+// $$
+
 export default function Home() {
 
     const particlesInit = useCallback(async engine => {
@@ -114,8 +130,11 @@ export default function Home() {
                 <div className={courgette.className} id='Introduction'>
                 <p>hello there,</p><p> My Name is </p>
                 </div>
-                <div id="MyName" className={rubik.className}> 
+                <div id="MyName" className={oswald.className}> 
                <h2>Rizvi Ahmed Abbas</h2>
+                </div>
+                <div id='Multiples-skills-text' className={rokkitt.className} > 
+                    <h4>I'm a Professional <div className='span'>MERN Stack Developer</div></h4>
                 </div>
             </div>
         </div>
