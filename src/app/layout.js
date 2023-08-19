@@ -3,12 +3,12 @@ import Footer from './Footer';
 import './CSS/Style.css';
 
 
-import { Roboto } from 'next/font/google'
+import { Raleway } from 'next/font/google'
 
-const roboto = Roboto({ 
+const raleway = Raleway({ 
   subsets: ['latin'],
-  weight: ['100'] 
-  })
+  weight: ['300'] 
+})
 
 export const metadata = {
   title: 'Web Portfolio - Rizvi Ahmed Abbas',
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
       </head>
-      <body className={roboto.className}>
+      <body className={raleway.className}>
         <Header />
         <div>{children}</div>
         

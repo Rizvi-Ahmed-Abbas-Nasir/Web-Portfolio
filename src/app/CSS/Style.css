@@ -1,5 +1,4 @@
 /* CSS RESET */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -58,9 +57,7 @@
 .icon{
     margin-left: 2.5em;
 }
-.icon p{
-    font-family: 'Raleway', sans-serif;
-}
+
 
 .SideNAV {
     display: flex;
@@ -240,24 +237,25 @@ label{
     background-color:var(--background);
     transition-property: background-color;
     transition-duration: 500ms;
-
 }
 
 .mainPage{
     width: 100%;
     height: 100vh;
+    display: flex;
 }
 
 
 
 /* my Photo */
+
 .frontPage{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-
+    gap: 0;
 }
 
 .rizvi {
@@ -272,6 +270,22 @@ label{
 }
 .myPhoto{
     z-index: 30;
+}
+#MyName{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+#MyName h2{
+    font-size: 45px;
+}
+#Introduction{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+#Introduction p{
+    font-size: 18px;
 }
 
 
@@ -331,4 +345,55 @@ label{
        
     }
     
+}
+
+@media screen and (max-width:768px){
+    .SideNAV{
+        display: none;
+    }
+    .HamBurgerIcon{
+        display: flex;
+        z-index: 30;
+    }
+
+    .Sub-SideNav{
+        z-index:20;
+        bottom:0.1em;
+        left: 100%;
+        position: fixed;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background: var(--background);
+        box-shadow:var(--showdow-box);
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 500ms;
+    }
+
+    .Sub-SideNav-on-click{
+        z-index:20;
+        bottom:0.1em;
+        left: 50%;
+        position: fixed;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background: var(--background);
+        box-shadow:var(--showdow-box);
+        transition: all ease-in 500ms;
+    }
+
+    .menuItems{
+        display: flex;
+        flex-direction: column;;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--base-text-clr);
+      
+        
+       
+    }
 }

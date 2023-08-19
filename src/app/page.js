@@ -1,5 +1,6 @@
 "use client"
-
+import { Rubik } from 'next/font/google'
+import { Courgette } from 'next/font/google'
 import { useCallback } from "react";
 import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
@@ -7,7 +8,16 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
 import Image from "next/image";
 import abbas from './Images/Rizvi Ahmed Abbas2.png'
 
+const rubik = Rubik({ 
+    subsets: ['cyrillic'],
+    weight: ['400'] 
+})
 
+const courgette = Courgette({ 
+    subsets: ['latin'],
+    weight: ['400'] 
+})
+  
 export default function Home() {
 
     const particlesInit = useCallback(async engine => {
@@ -100,7 +110,14 @@ export default function Home() {
 
             </div>
 
-            <div className="Descriptions"></div>
+            <div className="Descriptions">
+                <div className={courgette.className} id='Introduction'>
+                <p>hello there,</p><p> My Name is </p>
+                </div>
+                <div id="MyName" className={rubik.className}> 
+               <h2>Rizvi Ahmed Abbas</h2>
+                </div>
+            </div>
         </div>
         </div>
       </div>

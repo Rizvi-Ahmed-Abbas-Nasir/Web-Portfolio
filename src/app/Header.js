@@ -71,7 +71,7 @@ export default function Header() {
     return(
         <div className="ParentHeader">
         <div className='Header Header-section'>
-            <div className="icon"><p>rizvi.dev</p></div>
+            <div className="icon"><h4>rizvi.dev</h4></div>
             <div className="SideNAV">
                     <li><h4>Home</h4></li>
                     <li><h4>About</h4></li>
