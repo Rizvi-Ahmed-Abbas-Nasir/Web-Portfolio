@@ -1,14 +1,16 @@
 "use client"
-import { Lobster  } from 'next/font/google'
-import { Rokkitt  } from 'next/font/google'
-import { Oswald  } from 'next/font/google'
-import { Courgette } from 'next/font/google'
+import { Lobster  } from 'next/font/google';
+import { Rokkitt  } from 'next/font/google';
+import { Oswald  } from 'next/font/google';
+import { Courgette } from 'next/font/google';
 import { useCallback } from "react";
 import Particles from "react-particles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import Image from "next/image";
-import abbas from './Images/Rizvi Ahmed Abbas2.png'
+import abbas from './Images/Rizvi Ahmed Abbas2.png';
+import Typewriter from 'typewriter-effect';
+
 
 // Fonts Families
 const lobster  = Lobster ({ 
@@ -33,6 +35,7 @@ const courgette = Courgette({
 })
   
 // $$
+
 
 export default function Home() {
 
@@ -134,7 +137,20 @@ export default function Home() {
                <h2>Rizvi Ahmed Abbas</h2>
                 </div>
                 <div id='Multiples-skills-text' className={rokkitt.className} > 
-                    <h4>I'm a Professional <div className='span'>MERN Stack Developer</div></h4>
+                    <h4>I'm a Professional <div className='MultiText'> <Typewriter 
+                                                options={{
+                                                        strings: [
+                                                        'MERN Stack Developer', 
+                                                        'Python Developer',
+                                                        'Cloud Engineer'
+                                                        ],
+                                                        autoStart: true,
+                                                        loop: true,
+                                                    }}/></div></h4>
+                </div>
+                <div id='downloadAndContactBTN'>
+                    <button>Downlaod CV</button>
+                    <button>About Me</button>
                 </div>
             </div>
         </div>

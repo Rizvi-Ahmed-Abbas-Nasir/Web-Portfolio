@@ -11,6 +11,7 @@
     --background-Header:white;
     --background:white;
     --hamburgerIcon-BG-Clr:black;
+    --multiples-text-type:rebeccapurple;
 
 
     /* box showdow color */
@@ -23,6 +24,8 @@
     --background-Header:#232a3a;
     --background:#181c28;
     --hamburgerIcon-BG-Clr:white;
+    --multiples-text-type:rgb(226, 226, 25);
+
 
     /* box showdow color*/
     --showdow-box:0 2px 24px 0 rgba(71, 71, 73, 0.15);
@@ -291,14 +294,36 @@ label{
     margin-top: 1em;
 }
 #Multiples-skills-text h4{
-    font-size: 20px;
+    font-size: 19px;
     color: var(--base-text-clr);
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 7px;
+    padding-top:2px ;
 }
-.span{
-    color: rebeccapurple;
+.MultiText{
+    color: var(--multiples-text-type);
+}
+
+#downloadAndContactBTN{
+    display: flex;
+    justify-content: center;
+    z-index: 30;
+
+}
+#downloadAndContactBTN button{
+    margin:2em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+#downloadAndContactBTN button:first-child{
+    background-color: #ffffff;
+}
+#downloadAndContactBTN button:last-child{
+    background-color: #181c28;
+    color: white;
 }
 .Descriptions{
     /* margin-bottom: 7em; */
