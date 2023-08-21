@@ -9,6 +9,9 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 import Image from "next/image";
 import abbas from './Images/Rizvi Ahmed Abbas2.png';
+import insta from './Images/insta.png';
+import linkedin from "./Images/linkedin.png"
+import github from "./Images/github.png";
 import Typewriter from 'typewriter-effect';
 
 
