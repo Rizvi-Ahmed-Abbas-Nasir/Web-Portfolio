@@ -367,9 +367,9 @@ label{
 }
 #downloadAndContactBTN button{
     margin:2em;
-    padding:13px 20px;
+    padding:10px 14px;
     cursor: pointer;
-    height:6.5vh;
+    height:45px;
 }
 #downloadAndContactBTN button:first-child{
     background-color: var(--first-front-page-button-bg);
