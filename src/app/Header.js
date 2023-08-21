@@ -21,7 +21,11 @@ export default function Header() {
 
     // local storage for saving the visits
     // click for saved 'darkMode' in localStorage
-    let darkMode = localStorage.getItem('darkMode');
+    if (typeof window !== 'undefined') {
+        // Perform localStorage action
+        var darkMode = localStorage.getItem('darkMode');
+      }
+    
 
     //To enabled DarkTheme function
     const enableDarkTheme = () => {
