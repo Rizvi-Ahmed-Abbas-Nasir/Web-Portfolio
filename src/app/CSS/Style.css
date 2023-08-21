@@ -12,6 +12,12 @@
     --background:white;
     --hamburgerIcon-BG-Clr:black;
     --multiples-text-type:rebeccapurple;
+    --first-front-page-button-bg:#ffffff;
+    --first-front-page-button-border:#181c28;
+    --first-front-page-button-color:#181c28;
+    --second-front-page-button-bg:#181c28;
+    --second-front-page-button-border:#ffffff;
+    --second-front-page-button-color:#ffffff;
 
 
     /* box showdow color */
@@ -25,6 +31,12 @@
     --background:#181c28;
     --hamburgerIcon-BG-Clr:white;
     --multiples-text-type:rgb(226, 226, 25);
+    --first-front-page-button-bg:#181c28;
+    --first-front-page-button-border:#ffffff;
+    --first-front-page-button-color:#ffffff;
+    --second-front-page-button-bg:#ffffff;
+    --second-front-page-button-border:#181c28;
+    --second-front-page-button-color:#181c28;
 
 
     /* box showdow color*/
@@ -299,7 +311,7 @@ label{
     display: flex;
     flex-wrap: nowrap;
     gap: 7px;
-    padding-top:2px ;
+    padding-top:5px ;
 }
 .MultiText{
     color: var(--multiples-text-type);
@@ -308,22 +320,23 @@ label{
 #downloadAndContactBTN{
     display: flex;
     justify-content: center;
-    z-index: 30;
-
 }
 #downloadAndContactBTN button{
+    z-index: 30;
     margin:2em;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: 0.5px solid black;
+    padding:13px 20px;
+    border-radius: 50px;
     cursor: pointer;
 }
 #downloadAndContactBTN button:first-child{
-    background-color: #ffffff;
+    background-color: var(--first-front-page-button-bg);
+    border: 0.5px solid var(--first-front-page-button-border);
+    color:var(--first-front-page-button-color);
 }
 #downloadAndContactBTN button:last-child{
-    background-color: #181c28;
-    color: white;
+    background-color: var(--second-front-page-button-bg);
+    color: var(--second-front-page-button-color);
+    border: 0.5px solid var(--second-front-page-button-color);
 }
 .Descriptions{
     /* margin-bottom: 7em; */
