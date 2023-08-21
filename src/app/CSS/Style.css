@@ -22,6 +22,7 @@
 
     /* box showdow color */
     --showdow-box:0 2px 24px 0 rgb(0 0 0 / 15%);
+    --darker-showdow-box:0 2px 24px 0 rgba(0, 0, 0, 0.15);
 }   
 
 /* darkMode Theme */
@@ -35,13 +36,39 @@
     --first-front-page-button-border:#ffffff;
     --first-front-page-button-color:#ffffff;
     --second-front-page-button-bg:#ffffff;
-    --second-front-page-button-border:#181c28;
+    --second-front-page-button-border:#181928;
     --second-front-page-button-color:#181c28;
 
 
     /* box showdow color*/
     --showdow-box:0 2px 24px 0 rgba(71, 71, 73, 0.15);
+    --darker-showdow-box:0 2px 24px 0 rgba(167, 167, 167, 0.15);
 }
+
+/* Animation */
+/* Keyframes */
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0px) scale(1);
+    }
+}
+@keyframes fade-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px) scale(0.9);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0px) scale(1);
+    }
+}
+/* $$ */
+/* $$ */
 
 /* Header */
 .Header{
@@ -53,7 +80,7 @@
     width: 100%;
     height: 2em;
     align-items: center;
-   
+   animation: fade-down 0.5s;
 }
 
 .menuItems{
@@ -73,17 +100,32 @@
     margin-left: 2.5em;
 }
 
-
+/* Main Menus */
 .SideNAV {
     display: flex;
     align-items: center;
     margin: 2em;
     gap: 20px;
+    cursor: pointer;
+    transition: all 100ms ease-in 0s;
+    z-index: 60;
+}
+.SideNAV li h4{
+    padding: 2.5px 8px;
 }
 li{
     list-style: none;
 }
 
+.SideNAV li h4:hover{
+    background-color: var(--second-front-page-button-bg);
+    color:var(--second-front-page-button-color);
+    border-radius: 20px;
+    transition: all 100ms ease-in 0s;
+    transform: translatey(-0.1em);
+    border-bottom: 2px solid var(--second-front-page-button-border);
+}
+/* $$ */
 
 .isSticky{
     position: fixed;
@@ -268,7 +310,10 @@ label{
     justify-content: center;
     align-items: center;
     gap: 0;
+    animation:fade-up 1s;
 }
+
+
 /* $$ */
 
 /* my Photo */
@@ -323,18 +368,38 @@ label{
 #downloadAndContactBTN button{
     margin:2em;
     padding:13px 20px;
-    border-radius: 50px;
     cursor: pointer;
+    height:6.5vh;
 }
 #downloadAndContactBTN button:first-child{
     background-color: var(--first-front-page-button-bg);
-    border: 0.5px solid var(--first-front-page-button-border);
+    border: 1px solid var(--first-front-page-button-border);
     color:var(--first-front-page-button-color);
+    border-radius: 20px;
+    transition: all 100ms ease-in 0s;
 }
 #downloadAndContactBTN button:last-child{
     background-color: var(--second-front-page-button-bg);
     color: var(--second-front-page-button-color);
-    border: 0.5px solid var(--second-front-page-button-color);
+    border: 1px solid var(--second-front-page-button-border);
+    transition: all 100ms ease-in 0s;
+    border-radius: 20px;
+}
+
+#downloadAndContactBTN button:first-child:hover{
+    transition: all 100ms ease-in 0s;
+    transform: translatey(-0.2em);
+    box-shadow: var(--darker-showdow-box);
+    border-bottom: 2px solid var(--first-front-page-button-border);
+    
+
+}
+#downloadAndContactBTN button:last-child:hover{
+    transition: all 100ms ease-in 0s;
+    transform: translatey(-0.2em);
+    box-shadow: var(--darker-showdow-box);
+    border-bottom: 2px solid var(--second-front-page-button-border);
+    
 }
 .Descriptions{
     z-index: 30;
