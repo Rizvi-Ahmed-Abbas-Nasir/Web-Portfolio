@@ -52,6 +52,7 @@
         opacity: 0;
         transform: translateY(30px) scale(0.9);
     }
+
     100%{
         opacity: 1;
         transform: rotateY(0px) scale(1);
@@ -80,7 +81,7 @@
     width: 100%;
     height: 2em;
     align-items: center;
-   animation: fade-down 0.5s;
+   animation: fade-down 1s;
 }
 
 .menuItems{
@@ -299,7 +300,6 @@ label{
 .mainPage{
     width: 100%;
     height: 100vh;
-    display: flex;
 }
 
 
@@ -310,7 +310,7 @@ label{
     justify-content: center;
     align-items: center;
     gap: 0;
-    animation:fade-up 1s;
+    animation: fade-up 2s;
 }
 
 
@@ -359,11 +359,13 @@ label{
 }
 .MultiText{
     color: var(--multiples-text-type);
+
 }
 
 #downloadAndContactBTN{
     display: flex;
     justify-content: center;
+
 }
 #downloadAndContactBTN button{
     margin:2em;
@@ -389,7 +391,6 @@ label{
 #downloadAndContactBTN button:first-child:hover{
     transition: all 100ms ease-in 0s;
     transform: translatey(-0.2em);
-    box-shadow: var(--darker-showdow-box);
     border-bottom: 2px solid var(--first-front-page-button-border);
     
 
@@ -397,7 +398,6 @@ label{
 #downloadAndContactBTN button:last-child:hover{
     transition: all 100ms ease-in 0s;
     transform: translatey(-0.2em);
-    box-shadow: var(--darker-showdow-box);
     border-bottom: 2px solid var(--second-front-page-button-border);
     
 }
@@ -520,8 +520,9 @@ label{
         flex-direction: column;
     }
     /* $$ */
-
+    /* My Photo */
     .rizvi{
-        margin-left: 1em;
+        margin-left: 1.5em;
     }
+    /* $$ */
 }
