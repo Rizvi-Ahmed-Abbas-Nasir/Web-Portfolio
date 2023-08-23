@@ -11,7 +11,7 @@ const raleway = Raleway({
 })
 
 export const metadata = {
-  title: 'Web Portfolio - Rizvi Ahmed Abbas',
+  title: ' Web Portfolio - Rizvi Ahmed Abbas',
   
 }
 
