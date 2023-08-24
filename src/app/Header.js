@@ -79,7 +79,8 @@ export default function Header() {
             <div className="SideNAV">
                     <li><h4>Home</h4></li>
                     <li><h4>About</h4></li>
-                    <li><h4>Portfolio</h4></li>
+                    <li><h4>Projects</h4></li>
+                    <li><h4>Awards</h4></li>
                     <li><h4>Contact</h4></li>
                     <div>
                         <div onClick={DarkTheme} className="ThemeIcons"> 
@@ -106,7 +107,10 @@ export default function Header() {
                         <h4>About</h4>
                     </li>
                     <li>
-                        <h4>Portfolio</h4>
+                        <h4>Projects</h4>
+                    </li>
+                    <li>
+                        <h4>Awards</h4>
                     </li>
                     <li>
                         <h4>Contact</h4>
