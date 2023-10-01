@@ -18,6 +18,7 @@
     --second-front-page-button-bg:#181c28;
     --second-front-page-button-border:#ffffff;
     --second-front-page-button-color:#ffffff;
+    --cruves-backgroung-color:rgb(238, 241, 245);
 
 
     /* box showdow color */
@@ -38,6 +39,7 @@
     --second-front-page-button-bg:#ffffff;
     --second-front-page-button-border:#181928;
     --second-front-page-button-color:#181c28;
+    --cruves-backgroung-color:#0c111a;
 
 
     /* box showdow color*/
@@ -69,6 +71,23 @@
     }
 }
 /* $$ */
+
+/* OnScroll Animation  */
+.hidden{
+  opacity:0;
+  /* filter:blur(5px); */
+  transform:translateY(50px);
+  transition:all 1s;
+}
+
+.show{
+opacity:1;
+filter:blur(0);
+transform:translateY(0px);
+}
+/* ## */
+
+
 /* $$ */
 
 /* Header */
@@ -81,7 +100,6 @@
     width: 100%;
     height: 2em;
     align-items: center;
-   animation: fade-down 1s;
 }
 
 .menuItems{
@@ -414,6 +432,58 @@ label{
 /* $$ */
 /* $$ */
 
+/* Content Page */
+/* About ME */
+.AboutME {
+    content: '';
+    /* border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%; */
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    background-color: var(--background);
+    height: 100%;
+}
+
+.AboutME_Contents::after{
+    content: '';
+    border-top-left-radius: 100% 100%;
+    border-top-right-radius: 100% 100%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background-color: var(--cruves-backgroung-color);
+    height: 85%;
+    bottom: 0;
+}
+
+.AboutME_Contents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#Greeting h1{
+    font-size: 3rem;
+    z-index: 30;
+    margin-top: 10rem;
+    color: var(--base-text-clr);
+}
+
+#Greeting h2{
+    padding-top:2.2em ;
+    color: var(--base-text-clr);
+}
+
+#Greeting p{
+    font-size: 1rem;
+    color: var(--base-text-clr);
+    padding: 6rem 7rem;
+}
+/* ## */
+
+/* $$ */
 
 /* medies quries */
 @media screen and (max-width:481px){
