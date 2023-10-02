@@ -479,7 +479,8 @@ label{
 #Greeting p{
     font-size: 1rem;
     color: var(--base-text-clr);
-    padding: 6rem 7rem;
+    padding: 5rem 7rem;
+    letter-spacing: 2px;
 }
 /* ## */
 

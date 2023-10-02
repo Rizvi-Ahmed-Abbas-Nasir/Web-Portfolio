@@ -1,5 +1,6 @@
 
-"use client"
+"use client";
+
 import { Raleway } from 'next/font/google';
 
 
@@ -21,17 +22,22 @@ const raleway2 = Raleway({
 
 export default function AboutPageSection() {
 
-    const observer = new IntersectionObserver((entries) =>{
-        entries.forEach((entry) =>{
-          console.log(entry);
-          if(entry.isIntersecting){
-            entry.target.classList.add('show');
-          }
-          else{
-            entry.target.classList.remove("show")
-          }
-        })
-      } )
+
+    let observer = null;
+    if (typeof window !== "undefined"){ // The code inside brackets will be executed ONLY in browser
+    observer = new IntersectionObserver((entries) =>{
+      entries.forEach((entry) =>{
+        console.log(entry);
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+        else{
+          entry.target.classList.remove("show")
+        }
+      })
+    } )
+    }
+  
     
       const hiddenElements = document.querySelectorAll(".hidden");
      
