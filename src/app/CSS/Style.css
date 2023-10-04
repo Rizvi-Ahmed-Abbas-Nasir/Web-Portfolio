@@ -131,6 +131,12 @@ transform:translateY(0px);
 }
 .SideNAV li h4{
     padding: 2.5px 8px;
+    color: var(--base-text-clr);
+   
+}
+.SideNAV li a{
+     text-decoration: none;
+    text-decoration-line: none;
 }
 li{
     list-style: none;
@@ -305,7 +311,6 @@ label{
    }
    
 /* $$ */
-
 
 /* Home Page */
 .homePage{

@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import React, {useState} from "react";
+import Link from 'next/link';
+
 
 export default function Header() {
 
@@ -77,8 +79,8 @@ export default function Header() {
         <div className='Header Header-section'>
             <div className="icon"><h4>rizvi.dev</h4></div>
             <div className="SideNAV">
-                    <li><h4>Home</h4></li>
-                    <li><h4>About</h4></li>
+                    <li><Link href="/"><h4>Home</h4></Link></li>
+                    <li><Link href="/About"><h4>About</h4></Link></li>
                     <li><h4>Projects</h4></li>
                     <li><h4>Awards</h4></li>
                     <li><h4>Contact</h4></li>
