@@ -19,6 +19,7 @@
     --second-front-page-button-border:#ffffff;
     --second-front-page-button-color:#ffffff;
     --cruves-backgroung-color:rgb(238, 241, 245);
+   
 
 
     /* box showdow color */
@@ -40,6 +41,8 @@
     --second-front-page-button-border:#181928;
     --second-front-page-button-color:#181c28;
     --cruves-backgroung-color:#0c111a;
+ 
+   
 
 
     /* box showdow color*/
@@ -79,11 +82,25 @@
   transform:translateY(50px);
   transition:all 1s;
 }
+.hidden2{
+    opacity:0;
+    /* filter:blur(5px); */
+    transform:translateX(-200px);
+    transition:all 1s;
+  }
 
 .show{
 opacity:1;
 filter:blur(0);
 transform:translateY(0px);
+}
+
+.showleftSlider{
+
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0px);
+
 }
 /* ## */
 
@@ -447,13 +464,15 @@ label{
     z-index: 30;
     width: 100%;
     background-color: var(--background);
-    height: 100%;
+    height: 100vh;
 }
 
 .AboutME_Contents::after{
     content: '';
     border-top-left-radius: 100% 100%;
     border-top-right-radius: 100% 100%;
+    border-bottom-left-radius: 50% 70%;
+    border-bottom-right-radius: 50% 70%;
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -462,13 +481,14 @@ label{
     bottom: 0;
 }
 
+
+
 .AboutME_Contents{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-
 #Greeting h1{
     font-size: 3rem;
     z-index: 30;
@@ -488,8 +508,45 @@ label{
     letter-spacing: 2px;
 }
 /* ## */
-
 /* $$ */
+
+/* Myself */
+
+.MySelfContent{
+    height: 120vh;
+    width: 100%;
+    content: '';
+    z-index: 30;
+    background-color: var(--background);
+}
+.contentMyself{
+    display: flex;
+}
+
+#MyContents h1{
+    padding: 8rem 5rem;
+    margin-top: 2.5rem;
+}
+.mainContent{
+    display: flex;
+    justify-content: center;
+}
+
+#myimg{
+    content: '';
+    border-top-left-radius: 80% 50%;
+    border-top-right-radius: 39% 50%;
+    border-bottom-left-radius: 40% 50%;
+    border-bottom-right-radius: 80% 80%;
+    background-color:var(--background-Header);
+    box-shadow: var(--showdow-box);
+    height: 5%;
+    margin-top: -1rem;
+   
+}
+/* $$$ */
+
+
 
 /* medies quries */
 @media screen and (max-width:481px){
@@ -540,6 +597,21 @@ label{
       
         
        
+    }
+    #Greeting h1{
+        font-size: 1.8rem;
+        padding: 0rem 2rem;
+    }
+    
+    #Greeting h2{
+        padding-top:2.2em ;
+        font-size: 1rem;
+    }
+    
+    #Greeting p{
+        font-size: 0.7rem;
+        padding: 5rem 2rem;
+        letter-spacing: 2px;
     }
     
 }
@@ -601,4 +673,20 @@ label{
         margin-left: 1.5em;
     }
     /* $$ */
+
+    #Greeting h1{
+        font-size: 1.8rem;
+        padding: 0rem 2rem;
+    }
+    
+    #Greeting h2{
+        padding-top:2.2em ;
+        font-size: 1rem;
+    }
+    
+    #Greeting p{
+        font-size: 0.7rem;
+        padding: 5rem 2rem;
+        letter-spacing: 2px;
+    }
 }

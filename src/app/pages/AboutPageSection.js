@@ -3,6 +3,8 @@
 
 import { Raleway } from 'next/font/google';
 import { useEffect } from "react";
+import Myself from './Myself';
+// import Myself from './pages/Myself';
 
 
 
@@ -25,8 +27,7 @@ export default function AboutPageSection() {
 
  
 
-
-
+    //On Scroll Animation Function
     useEffect(()=> {
      let observer = new IntersectionObserver((entries) =>{
         entries.forEach((entry) =>{
@@ -35,7 +36,7 @@ export default function AboutPageSection() {
             entry.target.classList.add('show');
           }
           else{
-            entry.target.classList.remove("show")
+            //entry.target.classList.remove("show")
           }
         })
       } )
@@ -66,6 +67,9 @@ export default function AboutPageSection() {
             Vision Desktop Controller for more detial please review my full porfolio
             </p>
             </div>
+            </div>
+            <div className='MySelfContent'>
+              <Myself />
             </div>
         </div>
     );
