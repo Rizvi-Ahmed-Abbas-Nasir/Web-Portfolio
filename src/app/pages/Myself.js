@@ -53,9 +53,13 @@ export default function Myself() {
                     <Image src={abbaspic1} />
                 </div>
 
-                <di className-="Desciptions">
-                    
-                </di>            
+                <div className-="Desciptions">
+                    <div className='Descition'>
+                      <p>I am College Student Who have the passion for developing Highly Functionlay 
+                        web application and responsive</p>
+                    </div>
+                  
+                </div>            
 
             </div>
             </div>
