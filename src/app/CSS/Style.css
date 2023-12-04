@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Global Variables */
 :root{
     --base-text-clr:#030303;
@@ -25,7 +24,7 @@
     /* box showdow color */
     --showdow-box:0 2px 24px 0 rgb(0 0 0 / 15%);
     --darker-showdow-box:0 2px 24px 0 rgba(0, 0, 0, 0.15);
-}   
+}
 
 /* darkMode Theme */
 .darkmode{
@@ -49,6 +48,30 @@
     --showdow-box:0 2px 24px 0 rgba(71, 71, 73, 0.15);
     --darker-showdow-box:0 2px 24px 0 rgba(167, 167, 167, 0.15);
 }
+
+body {
+    overflow-x: hidden;
+     scrollbar-color: rgb(98 84 243);
+      scrollbar-width: thin;
+  }
+  
+  
+  body::-webkit-scrollbar {
+    width: 1rem;
+    color: var(--base-text-clr);
+  }
+  
+  body::-webkit-scrollbar-track {
+     background-color: var(--background);
+  }
+  body::-webkit-scrollbar-thumb {
+ 
+    background:var(--base-text-clr);
+      border: 5px solid transparent;
+      border-radius: 9px;
+      background-clip: content-box;
+  }
+
 
 /* Animation */
 /* Keyframes */
