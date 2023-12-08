@@ -3,7 +3,7 @@
 
 import { Raleway } from 'next/font/google';
 import { useEffect } from "react";
-import Myself from './Myself';
+import GetUserName from './GetUserName';
 // import Myself from './pages/Myself';
 
 
@@ -23,9 +23,6 @@ const raleway2 = Raleway({
 // ##
 
 export default function AboutPageSection() {
-
-
- 
 
     //On Scroll Animation Function
     useEffect(()=> {
@@ -69,7 +66,7 @@ export default function AboutPageSection() {
             </div>
             </div>
             <div className='MySelfContent'>
-              <Myself />
+              <GetUserName />
             </div>
         </div>
     );

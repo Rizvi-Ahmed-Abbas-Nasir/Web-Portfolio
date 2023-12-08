@@ -487,7 +487,7 @@ label{
     z-index: 30;
     width: 100%;
     background-color: var(--background);
-    height: 150vh;
+    height: 200vh;
     margin-top: 10rem;
 }
 
@@ -532,49 +532,231 @@ label{
 /* ## */
 /* $$ */
 
-/* Myself */
-
-.MySelfContent{
-    height: 120vh;
+/* UserContent */
+.UserNameContent{
+    display: flex;
     width: 100%;
+    height: 100vh;
+    justify-content:space-around;
+    align-content: center;
+    align-items: center;
+}
+
+
+.Pyramid{
+    width: 100%;
+}
+.Pyramid {
+	--c1: #d6d6d6;
+	--c2: #8f8f8f;
+	--c3: #353535;
+	--c4: var(--background);
+	height: 100vh;
+	background: 		
+		/*corners bot*/
+		conic-gradient(from 117deg at calc(50% + 128px) calc(50% + 179px), var(--c4) 72deg, #fff0 0 100%),
+  	    conic-gradient(from 117deg at calc(50% + 15px) calc(50% + 230px), var(--c4) 72deg, #fff0 0 100%),
+		conic-gradient(from 191deg at calc(50% - 107px) calc(50% + 181px), var(--c4) 50deg, #fff0 0 100%),
+		conic-gradient(from 194deg at calc(50% - 207px) calc(50% + 140px), var(--c4) 55deg, #fff0 0 100%),
+		/*corners top*/
+		conic-gradient(from 9deg at calc(50% + 154px) calc(50% + 18px), var(--c4) 90deg, #fff0 0 100%),
+		conic-gradient(from 10deg at calc(50% + 72px) calc(50% - 95px), var(--c4) 81deg, #fff0 0 100%),
+		conic-gradient(from -45deg at calc(50% - 50px) calc(50% - 105px), var(--c4) 56deg, #fff0 0 100%), 
+		conic-gradient(from -46deg at calc(50% - 198px) calc(50% + 100px), var(--c4) 59deg, #fff0 0 100%),
+		/*bg*/
+		conic-gradient(from 145deg at 50% calc(50% - 240px), #fff0 70deg, var(--c4) 0 100%),
+		linear-gradient(-25deg, var(--c4) calc(50% - 240px), #fff0 0),
+		linear-gradient(25deg, var(--c4) calc(50% - 240px), #fff0 0),
+		/*grain*/
+		repeating-conic-gradient(#0004 0%, transparent .00003%, transparent .0005%,  transparent .00095%),
+		repeating-conic-gradient(#fff2 0%, transparent .00005%, transparent .00015%, transparent .0009%),
+		/*holes*/
+		linear-gradient(99deg, #fff0 calc(50% + 155px), var(--c2) calc(50% + 156px) calc(50% + 185px), #fff0 calc(50% + 186px)),
+		linear-gradient(100deg, #fff0 calc(50% + 55px), var(--c2) calc(50% + 56px) calc(50% + 85px), #fff0 calc(50% + 86px)),
+		linear-gradient(101deg, #fff0 calc(50% - 100px), var(--c2) calc(50% - 99px) calc(50% - 70px), #fff0 calc(50% - 69px)),
+		linear-gradient(103deg, #fff0 calc(50% - 200px), var(--c2) calc(50% - 199px) calc(50% - 170px), #fff0 calc(50% - 169px)),
+		/*faces*/
+		linear-gradient(90deg, var(--c1) 50%, var(--c3) 50%);
+}
+
+
+
+.GetUserInputWarpper{
     content: '';
-    z-index: 30;
-    background-color: var(--background);
-}
-.contentMyself{
+    width: 30%;
     display: flex;
-    width: 100%;
-}
-#MyContents{
-    width: 100%;
-}
-#MyContents h1{
-    padding: 8rem 5rem;
-    margin-top: 2.5rem;
-    color:var(--base-text-clr);
-}
-.mainContent{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-
-.mydes{
-    content: '';
-    background-color:var(--background-Header);
-    box-shadow: var(--showdow-box);
-    padding: 0rem 2rem;
-    margin-top: -5rem;
-    height: 70vh;
-    display: flex;
-    justify-content: center;
+    align-content: center;
+    background-color:var(--cruves-backgroung-color); 
+    height: 60vh;
+    padding: 2rem 2rem;
     border-radius: 20px;
+    box-shadow: 9px 9px 2px 1px rgba(123, 123, 124, 0.2);;
 }
 
-#Descition p{
-    padding: 3rem 2rem;
-}
+/* Desktop Animation Icon */
+
+svg {
+    width: 256px;
+    height: 256px;
+  }
+  
+  /* SMOKE */
+  #smoke-1 {
+    stroke-dasharray: 0, 10;
+    animation: smoke 6s ease infinite;
+  }
+  
+  #smoke-2 {
+    stroke-dasharray: 0, 10;
+    animation: smoke 6s 0.5s ease infinite;
+  }
+  
+  @keyframes smoke {
+    0% { stroke-dasharray: 0, 10; }
+    50% { stroke-dasharray: 10, 0; }
+    100% { stroke-dasharray: 10, 0; opacity: 0; }
+  }
+  
+  /* WRITING */
+  #line-1 {
+    opacity: 0;
+    animation: writing 5s linear forwards infinite;
+  }
+  
+  #line-2 {
+    opacity: 0;
+    animation: writing 10s linear forwards infinite;
+  }
+  
+  #line-3 {
+    opacity: 0;
+    animation: writing 15s linear forwards infinite;
+  }
+  
+  #line-4 {
+    opacity: 0;
+    animation: writing 20s ease forwards infinite;
+  }
+  
+  @keyframes writing {
+    0% { width: 0px; opacity: 1;}
+    100% { width: 14px; opacity: 1;}
+  }
+  
+  /* ## */
+
+  /* UserInputbox */
+
+  .group{ 
+    position:relative; 
+    margin-top:1rem; 
+  }
+  input 				{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid #757575;
+    background-color: var(--cruves-backgroung-color);
+  }
+  input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  label 				 {
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    margin-left:0.2rem ;
+    top:-10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  input:focus ~ label, input:valid ~ label 		{
+    top:-30px;
+    font-size:14px;
+    color:#5264AE;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .bar 	{ position:relative; display:block; width:80%; }
+  .bar:before, .bar:after 	{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:#5264AE; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+  }
+  /* .bar:before {
+    left:80%;
+  } */
+  .bar:after {
+    right:0%; 
+  }
+  
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+  }
+  
+  /* active state */
+  input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+      from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+  }
+
+  /* ## */
+
+  .DeveloperName h2{
+    color: var(--base-text-clr);
+  }
+
+  .UserNameInputPara{
+    margin-top: 1rem;
+    color: var(--base-text-clr);
+  }
+  .InformationPara{
+    margin: 1rem 0;
+    color: var(--base-text-clr);
+  }
+
+ 
+
 /* $$$ */
 
 
