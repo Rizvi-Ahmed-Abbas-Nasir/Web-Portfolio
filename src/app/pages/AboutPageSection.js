@@ -4,7 +4,8 @@
 import { Raleway } from 'next/font/google';
 import { useEffect } from "react";
 import GetUserName from './GetUserName';
-// import Myself from './pages/Myself';
+import Myself from './Myself';
+import { OnScrollAnimation } from '../OnScrollAnimmation';
 
 
 
@@ -41,7 +42,6 @@ export default function AboutPageSection() {
       if (typeof document !== 'undefined') {
         // will run in client's browser only
         const hiddenElements = document.querySelectorAll(".hidden");
-         
         hiddenElements.forEach((el) => observer.observe(el));
     }
 
@@ -65,8 +65,11 @@ export default function AboutPageSection() {
             </p>
             </div>
             </div>
-            <div className='MySelfContent'>
+            <div className='UserNameInputs'>
               <GetUserName />
+            </div>
+            <div className="MyIntroduction">
+              <Myself />
             </div>
         </div>
     );

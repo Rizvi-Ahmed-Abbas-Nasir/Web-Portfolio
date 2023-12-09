@@ -1,11 +1,11 @@
 
 import { useEffect } from "react";
 
-export  function OnScrollAnimation(hiddenElements) {
+export  function OnScrollAnimation() {
     useEffect(()=> {
         let observer = new IntersectionObserver((entries) =>{
            entries.forEach((entry) =>{
-             console.log(entry);
+           
              if(entry.isIntersecting){
                entry.target.classList.add('show');
              }
@@ -14,12 +14,9 @@ export  function OnScrollAnimation(hiddenElements) {
              }
            })
          } )
-   
       
-         if (typeof document !== 'undefined') {
-           // will run in client's browser only
-           hiddenElements.forEach((el) => observer.observe(el));
-    }
-   
-         },[]);
+  return(observer);
+        },[]);
+
+    
 }

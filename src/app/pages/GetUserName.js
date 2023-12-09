@@ -1,10 +1,10 @@
 "use client"
-
 import { Raleway } from 'next/font/google';
 import abbaspic1 from "../Images/abbaspic1.png"
 import Image from 'next/image';
 import { useEffect } from 'react';
 import DesktopIcon from './DesktopIcon';
+import { OnScrollAnimation } from '../OnScrollAnimmation';
 
 // Fonts
 const raleway = Raleway({ 
@@ -21,44 +21,58 @@ const raleway2 = Raleway({
 
 export default function Myself() {
 
+  
         //On Scroll Animation Function
         useEffect(()=> {
             let observer = new IntersectionObserver((entries) =>{
                entries.forEach((entry) =>{
                  console.log(entry);
                  if(entry.isIntersecting){
-                   entry.target.classList.add('showleftSlider');
+                   entry.target.classList.add('rightSlider');
                  }
                  else{
                    //entry.target.classList.remove("show")
                  }
                })
              } )
+
+          
+
        
              if (typeof document !== 'undefined') {
                // will run in client's browser only
-               const hiddenElement = document.querySelectorAll(".hidden2");
-                
-               hiddenElement.forEach((el) => observer.observe(el));
+               const hiddenElement = document.querySelectorAll(".hidden3");
+              hiddenElement.forEach((el) => observer.observe(el));
            }
        
              },[]);
+
+
+
+            // Get the User Name Input
+             const handleInputChange = () => {
+              if (typeof document !== 'undefined') {
+                const UserName = document.getElementById('UserName');
+              }
+             };
+           
+          
           
 
     return(
         <div className="UserNameContent">
-          <div className='DesktopIconAnimation'>
+          <div className='DesktopIconAnimation hidden2'>
               <DesktopIcon />          
           </div>
           {/* <div className='Pyramid'></div> */}
-          <div className='GetUserInputWarpper'>
+          <div className='GetUserInputWarpper hidden3'>
             <div className='InputWarpper'>
               <div className='DeveloperName'>
              <h2>Enter Your Developer Name</h2>
              </div>
              <div className='InputBox'></div>
               <div class="group">      
-                <input type="text" required />
+                <input type="text" id='UserName' required />
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
@@ -70,7 +84,9 @@ export default function Myself() {
                     so when you visit next time it refer by your name
                   </p>
               </div>
-
+            </div>
+            <div className='UserNamebtn'>
+                <button onClick={handleInputChange}>Submit</button>
             </div>
             </div>
             

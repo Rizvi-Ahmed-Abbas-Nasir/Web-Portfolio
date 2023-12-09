@@ -112,6 +112,13 @@ body {
     transition:all 1s;
   }
 
+.hidden3{
+    opacity:0;
+    /* filter:blur(5px); */
+    transform:translateX(200px);
+    transition:all 1s;
+  }
+
 .show{
 opacity:1;
 filter:blur(0);
@@ -123,6 +130,13 @@ transform:translateY(0px);
     opacity: 1;
     filter:blur(0);
     transform: translateX(0px);
+
+}
+
+.rightSlider{
+  opacity: 1;
+  filter:blur(0);
+  transform: translateX(0px);
 
 }
 /* ## */
@@ -487,7 +501,7 @@ label{
     z-index: 30;
     width: 100%;
     background-color: var(--background);
-    height: 200vh;
+    height: 300vh;
     margin-top: 10rem;
 }
 
@@ -540,6 +554,7 @@ label{
     justify-content:space-around;
     align-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 
@@ -659,6 +674,7 @@ svg {
     border:none;
     border-bottom:1px solid #757575;
     background-color: var(--cruves-backgroung-color);
+    color: var(--base-text-clr);
   }
   input:focus 		{ outline:none; }
   
@@ -755,11 +771,37 @@ svg {
     color: var(--base-text-clr);
   }
 
+  .UserNamebtn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+  }
+  .UserNamebtn button{
+    padding: 0.3rem 1.2rem;
+    border: 1px solid var(--first-front-page-button-border);
+    background-color: var(--cruves-backgroung-color);
+    border-radius: 8px;
+    color: var(--base-text-clr);
+    transition: all 100ms ease-in 0s;
+    cursor: pointer;
+  }
+  .UserNamebtn button:hover{
+    transition: all 100ms ease-in 0s;
+    transform: translatey(-0.2em);
+    border-bottom: 2px solid var(--first-front-page-button-border);
+  }
  
 
 /* $$$ */
 
+/* MySelfIntroduction */
 
+.contentMyself{
+
+}
+
+/* $$ */
 
 
 

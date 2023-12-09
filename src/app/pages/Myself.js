@@ -37,7 +37,6 @@ export default function Myself() {
              if (typeof document !== 'undefined') {
                // will run in client's browser only
                const hiddenElement = document.querySelectorAll(".hidden2");
-                
                hiddenElement.forEach((el) => observer.observe(el));
            }
        
@@ -48,21 +47,7 @@ export default function Myself() {
         <div className="contentMyself">
             <div className={raleway.className} id='MyContents'>
             <h1 className='hidden2' >My Introduction - </h1> 
-            <div className='mainContent'>
-              <div className='mydes'>
-                <div className='hidden2' id='myimg'>
-                    <Image src={abbaspic1} />
-                </div>
-
-                <div className-="Desciptions">
-                    <div className='hidden2' id='Descition'>
-                      <p>I am College Student Who have the passion for developing Highly Functionlay 
-                        web application and responsive</p>
-                    </div>
-                  
-                </div>            
-                </div>
-            </div>
+           
             </div>
         </div>
     );
