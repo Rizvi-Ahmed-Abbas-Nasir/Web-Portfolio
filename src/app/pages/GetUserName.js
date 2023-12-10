@@ -60,23 +60,25 @@ export default function Myself() {
           
 
     return(
-        <div className="UserNameContent">
+        <div className="UserNameContent ">
           <div className='DesktopIconAnimation hidden2'>
               <DesktopIcon />          
           </div>
-          {/* <div className='Pyramid'></div> */}
+        
           <div className='GetUserInputWarpper hidden3'>
             <div className='InputWarpper'>
               <div className='DeveloperName'>
              <h2>Enter Your Developer Name</h2>
              </div>
              <div className='InputBox'></div>
+           
               <div class="group">      
                 <input type="text" id='UserName' required />
                 <span class="highlight"></span>
                 <span class="bar"></span>
                 <label>Name</label>
               </div>
+            
               <div className='UserNameInputPara'>
               <p>Enter Your Developer Name so i can know your better.</p>
               <div className='InformationPara'>

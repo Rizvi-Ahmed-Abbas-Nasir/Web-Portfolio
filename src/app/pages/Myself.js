@@ -46,8 +46,8 @@ export default function Myself() {
     return(
         <div className="contentMyself">
             <div className={raleway.className} id='MyContents'>
-            <h1 className='hidden2' >My Introduction - </h1> 
-           
+            <h1 className='hidden2 MyHeading' >My Introduction </h1> 
+              <div className='Pyramid'></div> 
             </div>
         </div>
     );

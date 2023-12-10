@@ -64,7 +64,7 @@ export default function AboutPageSection() {
             Vision Desktop Controller for more detial please review my full Portfolio
             </p>
             </div>
-            </div>
+            </div> 
             <div className='UserNameInputs'>
               <GetUserName />
             </div>

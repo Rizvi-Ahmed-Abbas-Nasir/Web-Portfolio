@@ -558,51 +558,12 @@ label{
 }
 
 
-.Pyramid{
-    width: 100%;
-}
-.Pyramid {
-	--c1: #d6d6d6;
-	--c2: #8f8f8f;
-	--c3: #353535;
-	--c4: var(--background);
-	height: 100vh;
-	background: 		
-		/*corners bot*/
-		conic-gradient(from 117deg at calc(50% + 128px) calc(50% + 179px), var(--c4) 72deg, #fff0 0 100%),
-  	    conic-gradient(from 117deg at calc(50% + 15px) calc(50% + 230px), var(--c4) 72deg, #fff0 0 100%),
-		conic-gradient(from 191deg at calc(50% - 107px) calc(50% + 181px), var(--c4) 50deg, #fff0 0 100%),
-		conic-gradient(from 194deg at calc(50% - 207px) calc(50% + 140px), var(--c4) 55deg, #fff0 0 100%),
-		/*corners top*/
-		conic-gradient(from 9deg at calc(50% + 154px) calc(50% + 18px), var(--c4) 90deg, #fff0 0 100%),
-		conic-gradient(from 10deg at calc(50% + 72px) calc(50% - 95px), var(--c4) 81deg, #fff0 0 100%),
-		conic-gradient(from -45deg at calc(50% - 50px) calc(50% - 105px), var(--c4) 56deg, #fff0 0 100%), 
-		conic-gradient(from -46deg at calc(50% - 198px) calc(50% + 100px), var(--c4) 59deg, #fff0 0 100%),
-		/*bg*/
-		conic-gradient(from 145deg at 50% calc(50% - 240px), #fff0 70deg, var(--c4) 0 100%),
-		linear-gradient(-25deg, var(--c4) calc(50% - 240px), #fff0 0),
-		linear-gradient(25deg, var(--c4) calc(50% - 240px), #fff0 0),
-		/*grain*/
-		repeating-conic-gradient(#0004 0%, transparent .00003%, transparent .0005%,  transparent .00095%),
-		repeating-conic-gradient(#fff2 0%, transparent .00005%, transparent .00015%, transparent .0009%),
-		/*holes*/
-		linear-gradient(99deg, #fff0 calc(50% + 155px), var(--c2) calc(50% + 156px) calc(50% + 185px), #fff0 calc(50% + 186px)),
-		linear-gradient(100deg, #fff0 calc(50% + 55px), var(--c2) calc(50% + 56px) calc(50% + 85px), #fff0 calc(50% + 86px)),
-		linear-gradient(101deg, #fff0 calc(50% - 100px), var(--c2) calc(50% - 99px) calc(50% - 70px), #fff0 calc(50% - 69px)),
-		linear-gradient(103deg, #fff0 calc(50% - 200px), var(--c2) calc(50% - 199px) calc(50% - 170px), #fff0 calc(50% - 169px)),
-		/*faces*/
-		linear-gradient(90deg, var(--c1) 50%, var(--c3) 50%);
-}
-
-
-
 .GetUserInputWarpper{
     content: '';
     width: 30%;
     display: flex;
     align-content: center;
     background-color:var(--cruves-backgroung-color); 
-    height: 60vh;
     padding: 2rem 2rem;
     border-radius: 20px;
     box-shadow: 9px 9px 2px 1px rgba(123, 123, 124, 0.2);;
@@ -665,8 +626,8 @@ svg {
   .group{ 
     position:relative; 
     margin-top:1rem; 
-  }
-  input 				{
+  } 
+  .group input{
     font-size:18px;
     padding:10px 10px 10px 5px;
     display:block;
@@ -676,10 +637,10 @@ svg {
     background-color: var(--cruves-backgroung-color);
     color: var(--base-text-clr);
   }
-  input:focus 		{ outline:none; }
+  .group input:focus{ outline:none; }
   
   /* LABEL ======================================= */
-  label 				 {
+  .group label {
     color:#999; 
     font-size:18px;
     font-weight:normal;
@@ -690,14 +651,14 @@ svg {
     transition:0.2s ease all; 
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
-  }
+  } 
   
   /* active state */
-  input:focus ~ label, input:valid ~ label 		{
+  .group input:focus ~ label, input:valid ~ label 		{
     top:-30px;
     font-size:14px;
     color:#5264AE;
-  }
+  } 
   
   /* BOTTOM BARS ================================= */
   .bar 	{ position:relative; display:block; width:80%; }
@@ -720,7 +681,7 @@ svg {
   }
   
   /* active state */
-  input:focus ~ .bar:before, input:focus ~ .bar:after {
+  .group input:focus ~ .bar:before, input:focus ~ .bar:after {
     width:50%;
   }
   
@@ -736,7 +697,7 @@ svg {
   }
   
   /* active state */
-  input:focus ~ .highlight {
+  .group input:focus ~ .highlight {
     -webkit-animation:inputHighlighter 0.3s ease;
     -moz-animation:inputHighlighter 0.3s ease;
     animation:inputHighlighter 0.3s ease;
@@ -775,7 +736,8 @@ svg {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
+  
   }
   .UserNamebtn button{
     padding: 0.3rem 1.2rem;
@@ -784,21 +746,64 @@ svg {
     border-radius: 8px;
     color: var(--base-text-clr);
     transition: all 100ms ease-in 0s;
-    cursor: pointer;
-  }
-  .UserNamebtn button:hover{
-    transition: all 100ms ease-in 0s;
     transform: translatey(-0.2em);
     border-bottom: 2px solid var(--first-front-page-button-border);
+    cursor: pointer;
   }
+  /* .UserNamebtn button:hover{
+    transition: all 100ms ease-in 0s;
+    border-bottom: 1px solid var(--first-front-page-button-border);
+  } */
  
 
 /* $$$ */
 
 /* MySelfIntroduction */
 
-.contentMyself{
+/* .MyHeading{
+  padding-left: 2rem;
+} */
 
+#MyContents h1{
+  position: relative;
+  top: 5rem;
+  margin-left: 3rem;
+}
+
+.Pyramid{
+  width: 100%;
+}
+.Pyramid {
+--c1: #d6d6d6;
+--c2: #8f8f8f;
+--c3: #353535;
+--c4: var(--background);
+height: 100vh;
+background: 		
+  /*corners bot*/
+  conic-gradient(from 117deg at calc(50% + 128px) calc(50% + 179px), var(--c4) 72deg, #fff0 0 100%),
+      conic-gradient(from 117deg at calc(50% + 15px) calc(50% + 230px), var(--c4) 72deg, #fff0 0 100%),
+  conic-gradient(from 191deg at calc(50% - 107px) calc(50% + 181px), var(--c4) 50deg, #fff0 0 100%),
+  conic-gradient(from 194deg at calc(50% - 207px) calc(50% + 140px), var(--c4) 55deg, #fff0 0 100%),
+  /*corners top*/
+  conic-gradient(from 9deg at calc(50% + 154px) calc(50% + 18px), var(--c4) 90deg, #fff0 0 100%),
+  conic-gradient(from 10deg at calc(50% + 72px) calc(50% - 95px), var(--c4) 81deg, #fff0 0 100%),
+  conic-gradient(from -45deg at calc(50% - 50px) calc(50% - 105px), var(--c4) 56deg, #fff0 0 100%), 
+  conic-gradient(from -46deg at calc(50% - 198px) calc(50% + 100px), var(--c4) 59deg, #fff0 0 100%),
+  /*bg*/
+  conic-gradient(from 145deg at 50% calc(50% - 240px), #fff0 70deg, var(--c4) 0 100%),
+  linear-gradient(-25deg, var(--c4) calc(50% - 240px), #fff0 0),
+  linear-gradient(25deg, var(--c4) calc(50% - 240px), #fff0 0),
+  /*grain*/
+  repeating-conic-gradient(#0004 0%, transparent .00003%, transparent .0005%,  transparent .00095%),
+  repeating-conic-gradient(#fff2 0%, transparent .00005%, transparent .00015%, transparent .0009%),
+  /*holes*/
+  linear-gradient(99deg, #fff0 calc(50% + 155px), var(--c2) calc(50% + 156px) calc(50% + 185px), #fff0 calc(50% + 186px)),
+  linear-gradient(100deg, #fff0 calc(50% + 55px), var(--c2) calc(50% + 56px) calc(50% + 85px), #fff0 calc(50% + 86px)),
+  linear-gradient(101deg, #fff0 calc(50% - 100px), var(--c2) calc(50% - 99px) calc(50% - 70px), #fff0 calc(50% - 69px)),
+  linear-gradient(103deg, #fff0 calc(50% - 200px), var(--c2) calc(50% - 199px) calc(50% - 170px), #fff0 calc(50% - 169px)),
+  /*faces*/
+  linear-gradient(90deg, var(--c1) 50%, var(--c3) 50%);
 }
 
 /* $$ */
@@ -806,6 +811,98 @@ svg {
 
 
 /* medies quries */
+
+@media screen and (max-width:768px){
+  .SideNAV{
+      display: none;
+  }
+  .HamBurgerIcon{
+      display: flex;
+      z-index: 60;
+  }
+
+  .Sub-SideNav{
+      z-index:40;
+      bottom:0.1em;
+      left: 100%;
+      position: fixed;
+      display: flex;
+      width: 50%;
+      height: 100%;
+      background: var(--background);
+      box-shadow:var(--showdow-box);
+      transition-property: all;
+      transition-timing-function: ease-in-out;
+      transition-duration: 500ms;
+  }
+
+  .Sub-SideNav-on-click{
+      z-index:40;
+      bottom:0.1em;
+      left: 50%;
+      position: fixed;
+      display: flex;
+      width: 50%;
+      height: 100%;
+      background: var(--background);
+      box-shadow:var(--showdow-box);
+      transition: all ease-in 500ms;
+  }
+
+  .menuItems{
+      display: flex;
+      flex-direction: column;;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--base-text-clr);
+  }
+
+  /* Home Page */
+  .frontPage{
+      flex-direction: column;
+  }
+  /* $$ */
+  /* My Photo */
+  .rizvi{
+      margin-left: 1.5em;
+  }
+  /* $$ */
+
+  #Greeting h1{
+      font-size: 1.8rem;
+      padding: 0rem 2rem;
+  }
+  
+  #Greeting h2{
+      padding-top:2.2em ;
+      font-size: 1rem;
+  }
+  
+  #Greeting p{
+      font-size: 0.7rem;
+      padding: 5rem 2rem;
+      letter-spacing: 2px;
+  }
+
+  /* UserIcon */
+  .UserNameContent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    justify-content: space-around;
+    gap: 6rem;
+  }
+
+  .GetUserInputWarpper{
+    width: 60%;
+  }
+  /* $$ */
+}
+
+
+
 @media screen and (max-width:481px){
     .SideNAV{
         display: none;
@@ -870,80 +967,15 @@ svg {
         padding: 5rem 2rem;
         letter-spacing: 2px;
     }
+    .UserNameContent{
+      display: flex;
+      justify-content: space-around;
+     
+    }
+
+    .GetUserInputWarpper{
+      width: 80%;
+    }
     
 }
 
-@media screen and (max-width:768px){
-    .SideNAV{
-        display: none;
-    }
-    .HamBurgerIcon{
-        display: flex;
-        z-index: 60;
-    }
-
-    .Sub-SideNav{
-        z-index:40;
-        bottom:0.1em;
-        left: 100%;
-        position: fixed;
-        display: flex;
-        width: 50%;
-        height: 100%;
-        background: var(--background);
-        box-shadow:var(--showdow-box);
-        transition-property: all;
-        transition-timing-function: ease-in-out;
-        transition-duration: 500ms;
-    }
-
-    .Sub-SideNav-on-click{
-        z-index:40;
-        bottom:0.1em;
-        left: 50%;
-        position: fixed;
-        display: flex;
-        width: 50%;
-        height: 100%;
-        background: var(--background);
-        box-shadow:var(--showdow-box);
-        transition: all ease-in 500ms;
-    }
-
-    .menuItems{
-        display: flex;
-        flex-direction: column;;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: var(--base-text-clr);
-    }
-
-    /* Home Page */
-    .frontPage{
-        flex-direction: column;
-    }
-    /* $$ */
-    /* My Photo */
-    .rizvi{
-        margin-left: 1.5em;
-    }
-    /* $$ */
-
-    #Greeting h1{
-        font-size: 1.8rem;
-        padding: 0rem 2rem;
-    }
-    
-    #Greeting h2{
-        padding-top:2.2em ;
-        font-size: 1rem;
-    }
-    
-    #Greeting p{
-        font-size: 0.7rem;
-        padding: 5rem 2rem;
-        letter-spacing: 2px;
-    }
-}
