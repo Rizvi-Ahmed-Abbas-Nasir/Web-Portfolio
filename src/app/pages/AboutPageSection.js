@@ -5,7 +5,7 @@ import { Raleway } from 'next/font/google';
 import { useEffect } from "react";
 import GetUserName from './GetUserName';
 import Myself from './Myself';
-import { OnScrollAnimation } from '../OnScrollAnimmation';
+import OnScrollAnimation  from '../OnScrollAnimmation';
 
 
 
@@ -25,27 +25,15 @@ const raleway2 = Raleway({
 
 export default function AboutPageSection() {
 
-    //On Scroll Animation Function
+    // //On Scroll Animation Function
     useEffect(()=> {
-     let observer = new IntersectionObserver((entries) =>{
-        entries.forEach((entry) =>{
-          console.log(entry);
-          if(entry.isIntersecting){
-            entry.target.classList.add('show');
-          }
-          else{
-            //entry.target.classList.remove("show")
-          }
-        })
-      } )
-
-      if (typeof document !== 'undefined') {
+    if (typeof document !== 'undefined') {
         // will run in client's browser only
-        const hiddenElements = document.querySelectorAll(".hidden");
-        hiddenElements.forEach((el) => observer.observe(el));
-    }
-
-      },[]);
+        var hiddenElements = document.querySelectorAll(".hidden");
+        // console.log(hiddenElements);
+         OnScrollAnimation(hiddenElements)
+      }
+    },[]);
    
 
   

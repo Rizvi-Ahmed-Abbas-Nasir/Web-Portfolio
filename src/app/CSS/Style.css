@@ -7,6 +7,7 @@
 /* Global Variables */
 :root{
     --base-text-clr:#030303;
+    --base-text--oppo-clr:#ffffff;
     --background-Header:white;
     --background:white;
     --hamburgerIcon-BG-Clr:black;
@@ -17,18 +18,24 @@
     --second-front-page-button-bg:#181c28;
     --second-front-page-button-border:#ffffff;
     --second-front-page-button-color:#ffffff;
-    --cruves-backgroung-color:rgb(238, 241, 245);
+    --cruves-backgroung-color:#f6f7f8;
+    --expandable-card-bg-front-color:#b9b9b9;
+    --expandable-card-bg-back-color:white;
+    --expandable-card-bg-front-hover-color:#ff0057;
+    --blur-effect:blur(2px);
    
 
 
     /* box showdow color */
     --showdow-box:0 2px 24px 0 rgb(0 0 0 / 15%);
     --darker-showdow-box:0 2px 24px 0 rgba(0, 0, 0, 0.15);
+    
 }
 
 /* darkMode Theme */
 .darkmode{
     --base-text-clr:#ffffff;
+    --base-text--oppo-clr:#030303;
     --background-Header:#232a3a;
     --background:#181c28;
     --hamburgerIcon-BG-Clr:white;
@@ -40,13 +47,17 @@
     --second-front-page-button-border:#181928;
     --second-front-page-button-color:#181c28;
     --cruves-backgroung-color:#0c111a;
- 
+    --expandable-card-bg-front-color:#0c111a;
+    --expandable-card-bg-back-color:#181c28;
+    --expandable-card-bg-front-hover-color:rgb(22, 118, 243);
+    --blur-effect:blur(1px);
+    
    
 
 
     /* box showdow color*/
-    --showdow-box:0 2px 24px 0 rgba(71, 71, 73, 0.15);
-    --darker-showdow-box:0 2px 24px 0 rgba(167, 167, 167, 0.15);
+    --showdow-box:0 2px 24px 0 rgba(0, 0, 0, 0.15);
+    --darker-showdow-box:0 2px 24px 0 rgba(44, 44, 44, 0.15);
 }
 
 body {
@@ -390,7 +401,6 @@ label{
     animation: fade-up 2s;
 }
 
-
 /* $$ */
 
 /* my Photo */
@@ -551,12 +561,23 @@ label{
     display: flex;
     width: 100%;
     height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+.UserNameHeading h1{
+  color: var(--base-text-clr);
+  margin-top: 6rem;
+}
+.UserNameMain{
+    display: flex;
+    width: 100%;
+    height: 100vh;
     justify-content:space-around;
     align-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
-
 
 .GetUserInputWarpper{
     content: '';
@@ -565,8 +586,8 @@ label{
     align-content: center;
     background-color:var(--cruves-backgroung-color); 
     padding: 2rem 2rem;
-    border-radius: 20px;
-    box-shadow: 9px 9px 2px 1px rgba(123, 123, 124, 0.2);;
+    border-radius: 10px;
+    box-shadow: 9px 9px 2px 1px rgba(123, 123, 124, 0.2);
 }
 
 /* Desktop Animation Icon */
@@ -754,20 +775,16 @@ svg {
     transition: all 100ms ease-in 0s;
     border-bottom: 1px solid var(--first-front-page-button-border);
   } */
- 
 
 /* $$$ */
 
 /* MySelfIntroduction */
 
-/* .MyHeading{
-  padding-left: 2rem;
-} */
-
-#MyContents h1{
-  position: relative;
-  top: 5rem;
-  margin-left: 3rem;
+.contentMyself{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  margin-top: 3rem;
 }
 
 .Pyramid{
@@ -805,6 +822,191 @@ background:
   /*faces*/
   linear-gradient(90deg, var(--c1) 50%, var(--c3) 50%);
 }
+
+.MySelfBlock{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.MySelfH1{
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  align-content: center;
+}
+
+.MySelfH1 h1{
+  color: var(--base-text-clr);
+}
+.MySelfH1{
+  margin-top: 1rem;
+}
+
+.MySelfIntroductionBlock{
+  display: flex;
+  justify-content: space-around;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(143, 143, 143, 0.1), rgba(139, 139, 139, 0));
+  backdrop-filter:var(--blur-effect) ;
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 0.5px solid rgba(129, 129, 129, 0.18); 
+  box-shadow: var(--showdow-box);
+  width: 80%;
+  height: 81vh;
+  margin-top: 1.5rem;
+}
+
+.MySelfCard{
+  width: 100%;
+  height: 80vh;
+}
+
+.containerExpandableCard{
+  width:100%;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+.expandable1{
+  z-index: 3;
+}
+.expandable2{
+  z-index: 1;
+}
+.expandablef1{
+  z-index: 2;
+}
+
+.face1{
+  border-top-right-radius:10px ;
+}
+.face2{
+  border-bottom-left-radius:10px ;
+}
+.containerExpandableCard .card{
+  cursor: pointer;
+  width: 40%;
+  height: 30vh; 
+  
+}
+.containerExpandableCard .card .face{
+  height: 20vh;
+  transition: 0.5s;
+ 
+}
+
+.containerExpandableCard .card .face.face1{
+  position: relative;
+  background: var(--expandable-card-bg-front-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(20px);
+}
+.containerExpandableCard .card:hover .face.face1{
+  background: var(--expandable-card-bg-front-hover-color);
+  transform: translateY(0);
+
+}
+.containerExpandableCard .card .face.face2{
+  position: relative;
+  background:var(--expandable-card-bg-back-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  box-shadow:var(--darker-showdow-box);
+  transform: translateY(-100px);
+}
+.containerExpandableCard .card:hover .face.face2{
+  transform: translateY(0);
+}
+
+.containerExpandableCard .card .face.face2 .content p{
+  margin: 0;
+  padding: 0;
+
+}
+.containerExpandableCard .card .face.face1 .content{
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.containerExpandableCard .card:hover .face.face1 .content{
+  opacity: 1;
+}
+
+.containerExpandableCard .card .face.face1 .content img{
+  max-width: 100px;
+}
+
+.containerExpandableCard .card .face.face1 .content h3{
+  /* margin: 10px 0 0; */
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+ 
+}
+
+.containerExpandableCard .card .face.face2 .content a{
+  /* margin: 15px 0 0; */
+  display:  inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+}
+
+.containerExpandableCard .card .face.face2 .content a:hover{
+  background: #333;
+  color: #fff;
+}
+
+.MySelfIntroductionPara{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--base-text-clr);
+}
+.MySelfHeading1{
+  margin: 0rem 1rem;
+  margin-top: 2rem;
+}
+
+.MySelfPara p{
+  font: 1.2rem;
+  margin: 0rem 1rem;
+  margin-top: 2rem;
+}
+.MySelfBtn a{
+  margin-top: 2rem;
+  display:  inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: var(--base-text-clr);
+  padding: 5px;
+  border: 1px solid #333;
+}
+.MySelfBtn a:hover{
+  background: var(--expandable-card-bg-front-hover-color);
+  color: var(--base-text--oppo-clr);
+}
+
 
 /* $$ */
 
@@ -887,7 +1089,7 @@ background:
   }
 
   /* UserIcon */
-  .UserNameContent{
+  .UserNameMain{
     display: flex;
     flex-direction: column;
     margin-top: 10rem;
@@ -898,6 +1100,24 @@ background:
   .GetUserInputWarpper{
     width: 60%;
   }
+
+  .UserNameHeading h1{
+    font-size: 1.5em;
+  }
+  .contentMyself{
+    height: 200vh;
+  }
+  .Pyramid{
+    margin-top: 30rem;
+  }
+  .MySelfIntroductionBlock{
+    width: 90%;
+    height: 180vh;
+    flex-direction: column;
+    margin-top: 30rem;
+  }
+
+ 
   /* $$ */
 }
 
@@ -967,7 +1187,7 @@ background:
         padding: 5rem 2rem;
         letter-spacing: 2px;
     }
-    .UserNameContent{
+    .UserNameMain{
       display: flex;
       justify-content: space-around;
      
@@ -976,6 +1196,32 @@ background:
     .GetUserInputWarpper{
       width: 80%;
     }
+
+    .contentMyself{
+      height: 200vh;
+    }
+    .Pyramid{
+      margin-top: 30rem;
+    }
+    .MySelfIntroductionBlock{
+      width: 90%;
+      height: 180vh;
+      flex-direction: column;
+      margin-top: 30rem;
+    }
+    .MySelfFirstHeading h1{
+      font-size: 1.5rem;
+    }
+    .MySelfHeading1 h3{
+      font-size: 1rem;
+    }
+    .MySelfPara p{
+      font-size: 1rem;
+    }
+   .MySelfQualities{
+    margin-top:15rem;
+   } 
+   
     
 }
 

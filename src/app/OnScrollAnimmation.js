@@ -1,22 +1,29 @@
-
-import { useEffect } from "react";
-
-export  function OnScrollAnimation() {
-    useEffect(()=> {
+export default function OnScrollAnimation(element) {
         let observer = new IntersectionObserver((entries) =>{
            entries.forEach((entry) =>{
            
              if(entry.isIntersecting){
-               entry.target.classList.add('show');
+              if(element[0].className == 'hidden'){
+                entry.target.classList.add('show');
+              }
+              else if(element[0].className == 'hidden2'){
+                entry.target.classList.add('rightSlider');
+              }
+              else{
+                entry.target.classList.add('showleftSlider');
+              }
              }
              else{
                //entry.target.classList.remove("show")
              }
            })
          } )
+       
       
-  return(observer);
-        },[]);
-
+         if (typeof document !== 'undefined') {
+          // will run in client's browser only
+          element.forEach((el) => observer.observe(el));
+      }
+      
     
 }
