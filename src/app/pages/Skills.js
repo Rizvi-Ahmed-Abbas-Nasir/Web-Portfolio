@@ -1,11 +1,29 @@
+import { useEffect } from 'react';
+import OnScrollAnimation from '../OnScrollAnimmation';
+
 
 
 
 export default function Skills() {
+
+     //On Scroll Animation Function
+     useEffect(()=> {
+        if (typeof document !== 'undefined') {
+          // will run in client's browser only
+          var hiddenElements = document.querySelectorAll(".hidden");
+          var hiddenElement2 = document.querySelectorAll(".hidden2");
+          var hiddenElement2 = document.querySelectorAll(".hidden3");
+          // console.log(hiddenElements);
+           OnScrollAnimation(hiddenElements)
+        }
+        },[]);
+
+
+
     return(
         <div className='MySkillsCotents'>
           
-            <div className="MYSkillTabs">
+            <div className="MYSkillTabs hidden">
             <section class="tabs-container">
                 <label for="tab1">Languages</label> 
                 <label  for="tab2">FrameWorks</label>
