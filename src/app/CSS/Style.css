@@ -21,8 +21,11 @@
     --cruves-backgroung-color:#f6f7f8;
     --expandable-card-bg-front-color:#b9b9b9;
     --expandable-card-bg-back-color:white;
-    --expandable-card-bg-front-hover-color:#ff0057;
-    --blur-effect:blur(2px);
+    --expandable-card-bg-front-hover-color:rebeccapurple;
+    --blur-effect:blur(5px);
+    --tab-background-color:#e0e0e0;
+    --secondry-color:rgb(156, 118, 197);
+    --box-shadow-background:5px 5px 2px 1px rgba(27, 27, 27, .5);
    
 
 
@@ -50,7 +53,11 @@
     --expandable-card-bg-front-color:#0c111a;
     --expandable-card-bg-back-color:#181c28;
     --expandable-card-bg-front-hover-color:rgb(22, 118, 243);
-    --blur-effect:blur(1px);
+    --blur-effect:blur(5px);
+    --tab-background-color:#0c111a;
+    --secondry-color:rgb(126, 178, 247);
+    --box-shadow-background:5px 5px 2px 1px rgba(184, 184, 184, 0.5);
+
     
    
 
@@ -316,7 +323,7 @@ li{
 .HamBurgerIcon{
     z-index: 60;
 }
-label{
+.HamBurgerIcon label{
     display:flex;
     flex-direction:column;
     width:30px;
@@ -325,7 +332,7 @@ label{
     justify-items: center;   
    }
    
-   label span{
+  .HamBurgerIcon label span{
     background: var(--hamburgerIcon-BG-Clr);
     border-radius:50px;
     height:3px;
@@ -668,7 +675,7 @@ svg {
     position:absolute;
     pointer-events:none;
     margin-left:0.2rem ;
-    top:-10px;
+    top: 1rem;
     transition:0.2s ease all; 
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
@@ -676,7 +683,7 @@ svg {
   
   /* active state */
   .group input:focus ~ label, input:valid ~ label 		{
-    top:-30px;
+    top:-1rem;
     font-size:14px;
     color:#5264AE;
   } 
@@ -789,6 +796,7 @@ svg {
 
 .Pyramid{
   width: 100%;
+  margin-top: 8rem;
 }
 .Pyramid {
 --c1: #d6d6d6;
@@ -1007,9 +1015,319 @@ background:
   color: var(--base-text--oppo-clr);
 }
 
-
 /* $$ */
 
+/* My Skills */
+.MySkillsCotents{
+  content: '';
+  background-color: var(--background);
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MYSkillTabs{
+  display: flex;
+  width:90%;
+  margin-top: -9rem;
+  
+}
+
+/* Tabs Name Container */
+.tabs-container{
+  position: relative;
+  background-color:var(--multiples-text-type);
+  width: 120px;
+  height: 88vh;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 20px;
+  border-Bottom-left-radius: 20px;
+
+}
+
+/* Hover effect on tabs names */
+/* .tabs-container label:hover{
+ 
+
+} */
+/* Tabs Names Label */
+.tabs-container label{
+  /* margin:.5rem .5rem; */
+  padding: .8rem .2rem;
+  width: 100%;
+  color:white;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  user-select: none;
+}
+
+
+
+/* Content area for tabs */
+.tab-content{
+  position: relative;
+  background-color: var(--tab-background-color);
+  width: calc(100% - 120px);
+  min-height: 40vh;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 19;
+  display: none;
+  border-top-right-radius: 20px;
+  border-Bottom-right-radius: 20px;
+  box-shadow: var(--darker-showdow-box);
+  color: var(--base-text-clr);
+}
+
+.tab-content:after{
+  content: "";
+  clear: both;
+
+}
+
+/* Hide input radio from users */
+input[name="tab"]{
+  display: none;
+}
+/* Show tab when input checked */
+input[name="tab"]:checked + .tab-content{
+  display: flex;
+  animation: slide 0.5s forwards;
+}
+
+/* Slide animation for tab contents */
+@keyframes slide{
+  from{
+    left: -10%;
+    opacity: 0;
+  }
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.ProgrammingLan{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.LanguageGrid{
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px;  */
+  column-gap: 10px;
+  row-gap: 15px;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 25vh 25vh;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 2rem .5rem;
+}
+
+.lanBox{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  background-color: var(--expandable-card-bg-back-color);
+  height: 100%;
+  color: var(--base-text-clr);
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.lanBox:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow-background);
+  transition: 0.3s;
+}
+
+.ProLanHeading h3{
+  color: var(--base-text-clr);
+  text-align: center;
+  font-size: 1.2em;
+ 
+}
+
+@keyframes progress {
+  0% { --percentage: 0; }
+  100% { --percentage: var(--value); }
+}
+
+@property --percentage {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+[role="progressbar"] {
+  --percentage: var(--value);
+  --primary: var(--expandable-card-bg-front-hover-color);
+  --secondary: var(--secondry-color);
+  --size: 80px;
+  animation: progress 2s 0.5s forwards;
+  width: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+[role="progressbar"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: conic-gradient(var(--primary) calc(var(--percentage) * 1%), var(--secondary) 0);
+  mask: radial-gradient(white 55%, transparent 0);
+  mask-mode: alpha;
+  -webkit-mask: radial-gradient(#0000 55%, #000 0);
+  -webkit-mask-mode: alpha;
+}
+
+[role="progressbar"]::after {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--primary);
+}
+.progresBar{
+  margin-top: 1rem;
+  --value:95;
+}
+.progresBar1{
+  --value:95;
+}
+.progresBar2{
+  --value:90;
+}
+.progresBar3{
+  --value:70;
+}
+.progresBar4{
+  --value:80;
+}
+.progresBar5{
+  --value:75;
+}
+.progresBar6{
+  --value:45;
+}
+.progresBar7{
+  --value:43;
+}
+.progresBar8{
+  --value:80;
+}
+.progresBar9{
+  --value:50;
+}
+.progresBar10{
+  --value:50;
+}
+.progresBar11{
+  --value:80;
+}
+.progresBar12{
+  --value:70;
+}
+.progresBar13{
+  --value:90;
+}
+.progresBar14{
+  --value:50;
+}
+.progresBar15{
+  --value:20;
+}
+.progresBar16{
+  --value:80;
+}
+.progresBar17{
+  --value:75;
+}
+.progresBar18{
+  --value:80;
+}
+.progresBar19{
+  --value:90;
+}
+.progresBar20{
+  --value:50;
+}
+.progresBar21{
+  --value:80;
+}
+.progresBar22{
+  --value:60;
+}
+.progresBar23{
+  --value:50;
+}
+.progresBar24{
+  --value:70;
+}
+.progresBar25{
+  --value:90;
+}
+.progresBar26{
+  --value:90;
+}
+.progresBar27{
+  --value:90;
+}
+.progresBar28{
+  --value:90;
+}
+.progresBar29{
+  --value:90;
+}
+.progresBar30{
+  --value:90;
+}
+.progresBar31{
+  --value:60;
+}
+.progresBar32{
+  --value:90;
+}
+.progresBar33{
+  --value:80;
+}
+.progresBar34{
+  --value:80;
+}
+.progresBar35{
+  --value:70;
+}
+.progresBar36{
+  --value:30;
+}
+
+
+
+
+
+
+
+/* $$ */
 
 
 /* medies quries */

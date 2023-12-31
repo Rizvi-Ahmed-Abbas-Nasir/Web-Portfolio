@@ -5,6 +5,7 @@ import { Raleway } from 'next/font/google';
 import { useEffect } from "react";
 import GetUserName from './GetUserName';
 import Myself from './Myself';
+import Skills from './Skills';
 import OnScrollAnimation  from '../OnScrollAnimmation';
 
 
@@ -58,6 +59,9 @@ export default function AboutPageSection() {
             </div>
             <div className="MyIntroduction">
               <Myself />
+            </div>
+            <div className="MySkillShow">
+              <Skills />
             </div>
         </div>
     );
