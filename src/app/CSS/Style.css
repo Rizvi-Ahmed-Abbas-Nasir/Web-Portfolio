@@ -1052,7 +1052,7 @@ background:
 
 /* Hover effect on tabs names */
 /* .tabs-container label:hover{
- 
+  background-color: rgba(0, 0, 0,.4);
 
 } */
 /* Tabs Names Label */
@@ -1063,13 +1063,26 @@ background:
   color:white;
   cursor: pointer;
   border-bottom: 1px solid white;
-  user-select: none;
+  position: relative;
 }
-
 
 
 /* Content area for tabs */
 .tab-content{
+  position: relative;
+  background-color: var(--tab-background-color);
+  width: calc(100% - 120px);
+  min-height: 40vh;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 19;
+  display: flex;
+  border-top-right-radius: 20px;
+  border-Bottom-right-radius: 20px;
+  box-shadow: var(--darker-showdow-box);
+  color: var(--base-text-clr);
+}
+.tabvisiable{
   position: relative;
   background-color: var(--tab-background-color);
   width: calc(100% - 120px);
@@ -1084,21 +1097,25 @@ background:
   color: var(--base-text-clr);
 }
 
+
 .tab-content:after{
   content: "";
   clear: both;
-
 }
+
 
 /* Hide input radio from users */
 input[name="tab"]{
   display: none;
-}
-/* Show tab when input checked */
-input[name="tab"]:checked + .tab-content{
+} 
+/* Show tab when input checked */ 
+ input[name="tab"]:checked + .tab-content{
   display: flex;
   animation: slide 0.5s forwards;
-}
+} 
+
+
+
 
 /* Slide animation for tab contents */
 @keyframes slide{

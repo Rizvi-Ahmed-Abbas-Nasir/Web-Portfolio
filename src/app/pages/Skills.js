@@ -19,6 +19,164 @@ export default function Skills() {
         },[]);
 
 
+        if (typeof document !== 'undefined') {
+            const TabContent = document.getElementsByClassName('tab-content');
+            const Tabvisiable = document.getElementsByClassName('tabvisiable');
+            Tabvisiable[0].style.display = "flex"
+            for(let i = 0; i < TabContent.length; i++){
+                TabContent[i].style.display = "none"
+                console.log(TabContent[i])
+            }
+            console.log(Tabvisiable[0].style.display)
+        }
+        // OnClick to check the radio button
+     
+        const CheckRadio = (id) =>{
+            const sliderRadio = document.getElementsByName("tab");
+            const TabContent = document.getElementsByClassName('tab-content');
+            const Tabvisiable = document.getElementsByClassName('tabvisiable');
+            if(Tabvisiable[0].style.display == "flex"){
+                Tabvisiable[0].style.display = "none";
+            }
+            sliderRadio.checked = "true"
+           
+            console.log(id)
+            if(id  == 1){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[9]){
+                            TabContent[9].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+            }
+            else if(id  == 2){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[1]){
+                            TabContent[1].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+                
+            }
+            else if(id  == 3){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[2]){
+                            TabContent[2].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else if(id == 4){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[3]){
+                            TabContent[3].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else if(id == 5){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[4]){
+                            TabContent[4].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else if(id == 6){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[5]){
+                            TabContent[5].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else if(id == 7){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[6]){
+                            TabContent[6].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else if(id == 8){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[7]){
+                            TabContent[7].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else if(id == 9){
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[8]){
+                            TabContent[8].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            else{
+                if (typeof document !== 'undefined') {
+                    for(let i = 0; i < TabContent.length; i++){
+                        if(TabContent[i] == TabContent[0]){
+                            TabContent[0].style.display = "flex";
+                        }
+                        else{
+                        TabContent[i].style.display = "none"
+                        }
+                    }
+                }
+
+            }
+            // console.log(sliderRadio.checked)
+        }
+
+       
+        
+
+
 
     return(
         <div className='MySkillsCotents'>
@@ -36,7 +194,7 @@ export default function Skills() {
                 <label for="tab9">GUI App</label>
                 <label for="tab-n">Tools</label>
             </section>
-            <input name="tab" id="tab-n" type="radio" checked />
+            <input name="tab" id="tab-n" type="radio" onClick={() => {CheckRadio(10)}}  />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -82,9 +240,70 @@ export default function Skills() {
                     {/* <div className="PHP lanBox"></div> */}
                 </div>
             </div>
+      
             </section>
-
-            <input name="tab" id="tab4" type="radio" checked />
+                
+            <input name="tab" id="tab2" type="radio" onClick={() => {CheckRadio(2)}}  />
+            <section class="tab-content">
+            <div className="ProgrammingLan">
+                <div className="SkillFirstHeading">
+                    <h1>Skill - FrameWorks</h1>
+                </div>
+                <div className="LanguageGrid">
+                <div className="lanBox">
+                        <div className="ProLanHeading">
+                            <h3>Next.js</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar8 progresBar"></div>
+                </div>
+                <div className="lanBox">
+                <div className="ProLanHeading">
+                    <h3>Express.js</h3>
+                </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar9 progresBar"></div>
+                </div>
+                <div className="lanBox">
+                <div className="ProLanHeading">
+                    <h3>Django</h3>
+                </div>
+                    <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar10 progresBar"></div>
+                </div>
+                    {/* <div className="Python lanBox">Python</div>
+                    <div className="Java lanBox">Java</div>
+                    <div className="C&C++ lanBox">C&C++</div>
+                    <div className="PHP lanBox">PHP</div> */}
+                </div>
+            </div>
+            </section>
+            
+            <input name="tab" id="tab3" type="radio" onClick={() => {CheckRadio(3)}}  />
+            <section class="tab-content">
+            <div className="ProgrammingLan">
+                <div className="SkillFirstHeading">
+                    <h1>Skill - Libraries</h1>
+                </div>
+                <div className="LanguageGrid">
+                <div className="lanBox">
+                        <div className="ProLanHeading">
+                            <h3>React.js</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar11 progresBar"></div>
+                </div>
+                <div className="lanBox">
+                        <div className="ProLanHeading">
+                            <h3>Node.js</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar12 progresBar"></div>
+                </div>
+                    {/* <div className="TypeScript lanBox">TypeScript</div>
+                    <div className="Python lanBox">Python</div>
+                    <div className="Java lanBox">Java</div>
+                    <div className="C&C++ lanBox">C&C++</div>
+                    <div className="PHP lanBox">PHP</div> */}
+                </div>
+            </div>
+            </section>
+            <input name="tab" id="tab4" type="radio" onClick={() => {CheckRadio(4)}} />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -116,7 +335,7 @@ export default function Skills() {
                 </div>
             </div>
             </section>
-            <input name="tab" id="tab5" type="radio" checked />
+            <input name="tab" id="tab5" type="radio" onClick={() => {CheckRadio(5)}} />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -153,7 +372,7 @@ export default function Skills() {
                 </div>
             </div>
             </section>
-            <input name="tab" id="tab6" type="radio" checked />
+            <input name="tab" id="tab6" type="radio" onClick={() => {CheckRadio(6)}} />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -205,7 +424,7 @@ export default function Skills() {
                 </div>
             </div>
             </section>
-            <input name="tab" id="tab7" type="radio" checked />
+            <input name="tab" id="tab7" type="radio" onClick={() => {CheckRadio(7)}} />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -237,7 +456,7 @@ export default function Skills() {
                 </div>
             </div>
             </section>
-            <input name="tab" id="tab8" type="radio" checked />
+            <input name="tab" id="tab8" type="radio" onClick={() => {CheckRadio(8)}} />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -260,7 +479,7 @@ export default function Skills() {
             </div>
             </section>
 
-            <input name="tab" id="tab9" type="radio" checked />
+            <input name="tab" id="tab9" type="radio"  onClick={() => {CheckRadio(9)}}  />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
@@ -282,71 +501,61 @@ export default function Skills() {
                 </div>
             </div>
             </section>
-
-            
-            <input name="tab" id="tab2" type="radio" checked />
+            <input name="tab" id="tab1" type="radio"  onClick={() => {CheckRadio(1)}}  />
             <section class="tab-content">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
-                    <h1>Skill - FrameWorks</h1>
+                    <h1>Skill - Programming Languages</h1>
                 </div>
                 <div className="LanguageGrid">
-                <div className="lanBox">
+                    <div className="HTML&CSS lanBox">
                         <div className="ProLanHeading">
-                            <h3>Next.js</h3>
+                            <h3>HTML&CSS</h3>
                         </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar8 progresBar"></div>
-                </div>
-                <div className="lanBox">
-                <div className="ProLanHeading">
-                    <h3>Express.js</h3>
-                </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar9 progresBar"></div>
-                </div>
-                <div className="lanBox">
-                <div className="ProLanHeading">
-                    <h3>Django</h3>
-                </div>
-                    <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar10 progresBar"></div>
-                </div>
-                    {/* <div className="Python lanBox">Python</div>
-                    <div className="Java lanBox">Java</div>
-                    <div className="C&C++ lanBox">C&C++</div>
-                    <div className="PHP lanBox">PHP</div> */}
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar1 progresBar"></div>
+                    </div>
+                    <div className="HTML&CSS lanBox">
+                        <div className="ProLanHeading">
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar2 progresBar"></div>
+                    </div>
+                    <div className="HTML&CSS lanBox">
+                        <div className="ProLanHeading">
+                            <h3>TypeScript</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar3 progresBar"></div>
+                    </div>
+                    <div className="HTML&CSS lanBox">
+                        <div className="ProLanHeading">
+                            <h3>Python</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar4 progresBar"></div>
+                    </div>
+                    <div className="HTML&CSS lanBox">
+                        <div className="ProLanHeading">
+                            <h3>Java</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar5 progresBar"></div>
+                    </div>
+                    <div className="HTML&CSS lanBox">
+                        <div className="ProLanHeading">
+                            <h3>C&C++</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar6 progresBar"></div>
+                    </div>
+                    <div className="HTML&CSS lanBox">
+                        <div className="ProLanHeading">
+                            <h3>PHP</h3>
+                        </div>
+                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar7 progresBar"></div>
+                    </div>
                 </div>
             </div>
             </section>
             
-            <input name="tab" id="tab3" type="radio" checked />
-            <section class="tab-content">
-            <div className="ProgrammingLan">
-                <div className="SkillFirstHeading">
-                    <h1>Skill - Libraries</h1>
-                </div>
-                <div className="LanguageGrid">
-                <div className="lanBox">
-                        <div className="ProLanHeading">
-                            <h3>React.js</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar11 progresBar"></div>
-                </div>
-                <div className="lanBox">
-                        <div className="ProLanHeading">
-                            <h3>Node.js</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar12 progresBar"></div>
-                </div>
-                    {/* <div className="TypeScript lanBox">TypeScript</div>
-                    <div className="Python lanBox">Python</div>
-                    <div className="Java lanBox">Java</div>
-                    <div className="C&C++ lanBox">C&C++</div>
-                    <div className="PHP lanBox">PHP</div> */}
-                </div>
-            </div>
-            </section>
-         
-            <input name="tab" id="tab1" type="radio" checked />
-            <section class="tab-content">
+            <input name="tab" type="radio"    />
+            <section class="tabvisiable">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
                     <h1>Skill - Programming Languages</h1>
