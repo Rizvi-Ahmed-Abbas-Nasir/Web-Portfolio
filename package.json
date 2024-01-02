@@ -13,7 +13,7 @@
     "eslint": "8.45.0",
     "eslint-config-next": "^13.4.12",
     "gsap": "^3.12.2",
-    "next": "^14.0.5-canary.34",
+    "next": "^13.4.12",
     "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

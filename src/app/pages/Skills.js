@@ -11,35 +11,34 @@ export default function Skills() {
         if (typeof document !== 'undefined') {
           // will run in client's browser only
           var hiddenElements = document.querySelectorAll(".hidden");
-          var hiddenElement2 = document.querySelectorAll(".hidden2");
-          var hiddenElement2 = document.querySelectorAll(".hidden3");
+        //   var hiddenElement2 = document.querySelectorAll(".hidden2");
+        //   var hiddenElement2 = document.querySelectorAll(".hidden3");
           // console.log(hiddenElements);
            OnScrollAnimation(hiddenElements)
         }
         },[]);
 
-
+        useEffect(()=> {
         if (typeof document !== 'undefined') {
             const TabContent = document.getElementsByClassName('tab-content');
-            const Tabvisiable = document.getElementsByClassName('tabvisiable');
-            Tabvisiable[0].style.display = "flex"
+          
             for(let i = 0; i < TabContent.length; i++){
                 TabContent[i].style.display = "none"
                 console.log(TabContent[i])
             }
-            console.log(Tabvisiable[0].style.display)
+
+            if(TabContent[9]){
+            TabContent[9].style.display = "flex"
+            }
         }
+        },[]);
         // OnClick to check the radio button
      
         const CheckRadio = (id) =>{
             const sliderRadio = document.getElementsByName("tab");
             const TabContent = document.getElementsByClassName('tab-content');
-            const Tabvisiable = document.getElementsByClassName('tabvisiable');
-            if(Tabvisiable[0].style.display == "flex"){
-                Tabvisiable[0].style.display = "none";
-            }
+
             sliderRadio.checked = "true"
-           
             console.log(id)
             if(id  == 1){
                 if (typeof document !== 'undefined') {
@@ -503,59 +502,6 @@ export default function Skills() {
             </section>
             <input name="tab" id="tab1" type="radio"  onClick={() => {CheckRadio(1)}}  />
             <section class="tab-content">
-            <div className="ProgrammingLan">
-                <div className="SkillFirstHeading">
-                    <h1>Skill - Programming Languages</h1>
-                </div>
-                <div className="LanguageGrid">
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>HTML&CSS</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar1 progresBar"></div>
-                    </div>
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>JavaScript</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar2 progresBar"></div>
-                    </div>
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>TypeScript</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar3 progresBar"></div>
-                    </div>
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>Python</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar4 progresBar"></div>
-                    </div>
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>Java</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar5 progresBar"></div>
-                    </div>
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>C&C++</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar6 progresBar"></div>
-                    </div>
-                    <div className="HTML&CSS lanBox">
-                        <div className="ProLanHeading">
-                            <h3>PHP</h3>
-                        </div>
-                        <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" className="progresBar7 progresBar"></div>
-                    </div>
-                </div>
-            </div>
-            </section>
-            
-            <input name="tab" type="radio"    />
-            <section class="tabvisiable">
             <div className="ProgrammingLan">
                 <div className="SkillFirstHeading">
                     <h1>Skill - Programming Languages</h1>
