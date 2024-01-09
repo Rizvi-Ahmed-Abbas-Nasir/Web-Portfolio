@@ -23,18 +23,21 @@ const lobster  = Lobster ({
 
 const rokkitt  = Rokkitt ({ 
     subsets: ['latin'],
-    weight: ['200'] 
+    weight: ['200'],
+    preload: false,
 })
 
 
 const oswald  = Oswald ({ 
     subsets: ['latin'],
-    weight: ['200'] 
+    weight: ['200'],
+    preload: false,
 })
 
 const courgette = Courgette({ 
     subsets: ['latin'],
-    weight: ['400'] 
+    weight: ['400'],
+    preload: false,
 })
   
 // $$

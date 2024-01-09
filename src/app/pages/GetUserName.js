@@ -28,11 +28,12 @@ export default function Myself() {
         if (typeof document !== 'undefined') {
           // will run in client's browser only
           var hiddenElements = document.querySelectorAll(".hidden");
-          var hiddenElements = document.querySelectorAll(".hidden2");
-          var hiddenElement2 = document.querySelectorAll(".hidden3");
+          var hiddenElement2 = document.querySelectorAll(".hidden2");
+          var hiddenElement3 = document.querySelectorAll(".hidden3");
           // console.log(hiddenElements);
           OnScrollAnimation(hiddenElements)
           OnScrollAnimation(hiddenElement2)
+          OnScrollAnimation(hiddenElement3)
         }
         },[]);
     

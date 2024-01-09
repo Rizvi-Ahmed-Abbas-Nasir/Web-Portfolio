@@ -10,11 +10,12 @@ export default function Skills() {
      useEffect(()=> {
         if (typeof document !== 'undefined') {
           // will run in client's browser only
-          var hiddenElements = document.querySelectorAll(".hidden");
-        //   var hiddenElement2 = document.querySelectorAll(".hidden2");
-        //   var hiddenElement2 = document.querySelectorAll(".hidden3");
+        //   var hiddenElements = document.querySelectorAll(".hidden");
+          var hiddenElement2 = document.querySelectorAll(".hidden2");
+          var hiddenElement3 = document.querySelectorAll(".hidden3");
           // console.log(hiddenElements);
-           OnScrollAnimation(hiddenElements)
+           OnScrollAnimation(hiddenElement2)
+           OnScrollAnimation(hiddenElement3)
         }
         },[]);
 
@@ -180,7 +181,8 @@ export default function Skills() {
     return(
         <div className='MySkillsCotents'>
           
-            <div className="MYSkillTabs hidden">
+            <div className="MYSkillTabs hidden2">
+           
             <section class="tabs-container">
                 <label for="tab1">Languages</label> 
                 <label  for="tab2">FrameWorks</label>
@@ -193,6 +195,7 @@ export default function Skills() {
                 <label for="tab9">GUI App</label>
                 <label for="tab-n">Tools</label>
             </section>
+         
             <input name="tab" id="tab-n" type="radio" onClick={() => {CheckRadio(10)}}  />
             <section class="tab-content">
             <div className="ProgrammingLan">

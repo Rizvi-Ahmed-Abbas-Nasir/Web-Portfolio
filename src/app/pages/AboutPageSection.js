@@ -7,6 +7,7 @@ import GetUserName from './GetUserName';
 import Myself from './Myself';
 import Skills from './Skills';
 import OnScrollAnimation  from '../OnScrollAnimmation';
+import TimeLine from './TimeLineComponent'
 
 
 
@@ -63,6 +64,9 @@ export default function AboutPageSection() {
             <div className="MySkillShow">
               <Skills />
             </div>
+            {/* <div className="MyTimeLine">
+              <TimeLine />
+            </div> */}
         </div>
     );
 
