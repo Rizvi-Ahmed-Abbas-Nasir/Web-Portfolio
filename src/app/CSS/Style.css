@@ -126,15 +126,15 @@ body {
 .hidden2{
     opacity:0;
     /* filter:blur(5px); */
-    transform:translateX(-200px);
+    transform: translateX(-50%);
     transition:all 1s;
   }
 
 .hidden3{
-    opacity:0;
-    /* filter:blur(5px); */
-    transform:translateX(200px);
-    transition:all 1s;
+  opacity:0;
+  /* filter:blur(5px); */
+  transform: translateX(-100%);
+  transition:all 1s;
   }
 
 .show{
@@ -147,7 +147,7 @@ transform:translateY(0px);
 
     opacity: 1;
     filter:blur(0);
-    transform: translateX(0px);
+    transform: translateX(0%);
 
 }
 
@@ -595,6 +595,7 @@ li{
     padding: 2rem 2rem;
     border-radius: 10px;
     box-shadow: 9px 9px 2px 1px rgba(123, 123, 124, 0.2);
+
 }
 
 /* Desktop Animation Icon */

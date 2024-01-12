@@ -25,11 +25,11 @@ export default function Myself() {
         if (typeof document !== 'undefined') {
           // will run in client's browser only
           var hiddenElements = document.querySelectorAll(".hidden");
-          var hiddenElement2 = document.querySelectorAll(".hidden2");
-          var hiddenElement2 = document.querySelectorAll(".hidden3");
+        //   var hiddenElement2 = document.querySelectorAll(".hidden2");
+        //   var hiddenElement2 = document.querySelectorAll(".hidden3");
           // console.log(hiddenElements);
            OnScrollAnimation(hiddenElements)
-           OnScrollAnimation(hiddenElement2)
+        //    OnScrollAnimation(hiddenElement2)
         }
         },[]);
           
@@ -39,7 +39,7 @@ export default function Myself() {
             <div className='Pyramid hidden'>
                 <div className='MySelfBlock'>
                     <div className='MySelfIntroductionBlock'>
-                        <div className='MySelfParagraph MySelfH1 hidden2'>
+                        <div className='MySelfParagraph MySelfH1 hidden'>
                             <div className='MySelfFirstHeading'>
                                 <h1>Who Am I</h1>
                             </div>
@@ -71,7 +71,7 @@ export default function Myself() {
                                 </div>
                             </div>
                         </div>
-                        <div className='MySelfQualities MySelfH1 hidden3 '>
+                        <div className='MySelfQualities MySelfH1 hidden '>
                             <div>
                                 <h1>Qualities</h1>
                             </div>

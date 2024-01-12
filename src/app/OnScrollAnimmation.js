@@ -6,7 +6,7 @@ export default function OnScrollAnimation(element) {
               if(element[0].className == 'hidden'){
                 entry.target.classList.add('show');
               }
-              else if(element[0].className == 'hidden2' | element[1].className == 'hidden2'){
+              else if(element[0].className == 'hidden2' ){
                 entry.target.classList.add('rightSlider');
               }
               else{
