@@ -806,30 +806,8 @@ svg {
 --c4: var(--background);
 height: 100vh;
 background: 		
-  /*corners bot*/
-  conic-gradient(from 117deg at calc(50% + 128px) calc(50% + 179px), var(--c4) 72deg, #fff0 0 100%),
-      conic-gradient(from 117deg at calc(50% + 15px) calc(50% + 230px), var(--c4) 72deg, #fff0 0 100%),
-  conic-gradient(from 191deg at calc(50% - 107px) calc(50% + 181px), var(--c4) 50deg, #fff0 0 100%),
-  conic-gradient(from 194deg at calc(50% - 207px) calc(50% + 140px), var(--c4) 55deg, #fff0 0 100%),
-  /*corners top*/
-  conic-gradient(from 9deg at calc(50% + 154px) calc(50% + 18px), var(--c4) 90deg, #fff0 0 100%),
-  conic-gradient(from 10deg at calc(50% + 72px) calc(50% - 95px), var(--c4) 81deg, #fff0 0 100%),
-  conic-gradient(from -45deg at calc(50% - 50px) calc(50% - 105px), var(--c4) 56deg, #fff0 0 100%), 
-  conic-gradient(from -46deg at calc(50% - 198px) calc(50% + 100px), var(--c4) 59deg, #fff0 0 100%),
-  /*bg*/
-  conic-gradient(from 145deg at 50% calc(50% - 240px), #fff0 70deg, var(--c4) 0 100%),
-  linear-gradient(-25deg, var(--c4) calc(50% - 240px), #fff0 0),
-  linear-gradient(25deg, var(--c4) calc(50% - 240px), #fff0 0),
-  /*grain*/
-  repeating-conic-gradient(#0004 0%, transparent .00003%, transparent .0005%,  transparent .00095%),
-  repeating-conic-gradient(#fff2 0%, transparent .00005%, transparent .00015%, transparent .0009%),
-  /*holes*/
-  linear-gradient(99deg, #fff0 calc(50% + 155px), var(--c2) calc(50% + 156px) calc(50% + 185px), #fff0 calc(50% + 186px)),
-  linear-gradient(100deg, #fff0 calc(50% + 55px), var(--c2) calc(50% + 56px) calc(50% + 85px), #fff0 calc(50% + 86px)),
-  linear-gradient(101deg, #fff0 calc(50% - 100px), var(--c2) calc(50% - 99px) calc(50% - 70px), #fff0 calc(50% - 69px)),
-  linear-gradient(103deg, #fff0 calc(50% - 200px), var(--c2) calc(50% - 199px) calc(50% - 170px), #fff0 calc(50% - 169px)),
-  /*faces*/
-  linear-gradient(90deg, var(--c1) 50%, var(--c3) 50%);
+  corners bot
+ 
 }
 
 .MySelfBlock{
