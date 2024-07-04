@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import college from '../Images/college.jpg'
 import AutoSlider from "./AutoSlider";
 import { useEffect } from "react";
 import OnScrollAnimation from '../OnScrollAnimmation';
