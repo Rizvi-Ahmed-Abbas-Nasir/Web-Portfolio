@@ -60,28 +60,20 @@ export default function Slider0() {
   
   </figure>
   <figure className="js-slider_item img-2">
-    <div className="js-slider_img">
-      <Image className="c-img-h-full" src={college} width={100} height={100} />
-      </div>
-    <figcaption className="wo-caption">
-      <h3 className="wo-h3">「風流無くてなゝくせ」遠眼鏡</h3>
-      <ul className="wo-credit">
-        <li>大判 享和年間 (1801-04)</li>
-        <li>リー・ダークス・コレクション</li>
-        <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li></ul>
-    </figcaption>
-  </figure>
-  <figure className="js-slider_item img-3">
-    <div className="js-slider_img">
-      {/* <img className="c-img-h-full" src="https://pics.codecolor.cn/images-opacity-slider/img_2_2.jpg" alt=""> */}
-      </div>
-    <figcaption className="wo-caption">
-      <h3 className="wo-h3">「風流無くてなゝくせ」ほおずき</h3>
-      <ul className="wo-credit">
-        <li>大判 享和年間 (1801-04)</li>
-        <li>米・個人蔵</li>
-        <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li></ul>
-    </figcaption>
+  <div className="js-slider_img">
+    <div className="Js-slider-Education"> <h1>Education</h1></div>
+    <div className="js-slider-Ed-details">
+    <div className="CollegeName"> <h2>College Name: Vasantdada Patil Pratishthan's College of Engineering </h2></div>
+     
+
+    <div className="JS-imgslider">
+      <AutoSlider />
+    </div>
+    
+    </div>
+   
+
+    </div>
   </figure>
   <div className="js-slider_nav">
     <label className="js-slider_nav_item s-nav-1 prev" for="s-3" onClick={() => CheckRadioSlider()}></label>
