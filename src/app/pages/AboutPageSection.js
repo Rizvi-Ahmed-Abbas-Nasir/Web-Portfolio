@@ -8,6 +8,7 @@ import Myself from './Myself';
 import Skills from './Skills';
 import OnScrollAnimation  from '../OnScrollAnimmation';
 import TimeLine from './TimeLineComponent'
+import MyEducations from './MyEducations';
 
 
 
@@ -66,6 +67,9 @@ export default function AboutPageSection() {
             </div>
             <div className="MyTimeLine">
               <TimeLine />
+            </div>
+            <div className="MyEducation">
+              <MyEducations />
             </div>
         </div>
     );
