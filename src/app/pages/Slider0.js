@@ -3,6 +3,7 @@ import Image from "next/image";
 import AutoSlider from "./AutoSlider";
 import { useEffect } from "react";
 import OnScrollAnimation from '../OnScrollAnimmation';
+import AutoSlider2 from "./AutoSlider2";
 
 
 export default function Slider0() {
@@ -44,7 +45,13 @@ export default function Slider0() {
     <div className="js-slider_img">
     <div className="Js-slider-Education"> <h1>Education</h1></div>
     <div className="js-slider-Ed-details">
-    <div className="CollegeName"> <h2>College Name: Vasantdada Patil Pratishthan's College of Engineering </h2></div>
+    <div className="CollegeName">
+       <h2>COLLEGE NAME: Vasantdada Patil Pratishthan's College of Engineering </h2>
+       <h3>DEGREE PROGRAM: Bachelor of engineering in Computer </h3>
+       <h3>GRADE: 8.4</h3>
+       <h3>ADAEMIC ACTIVITY: 2 Hackathons Won, Conduct Postman API WorkShop, Team Leader</h3>
+
+       </div>
      
 
     <div className="JS-imgslider">
@@ -62,11 +69,17 @@ export default function Slider0() {
   <div className="js-slider_img">
     <div className="Js-slider-Education"> <h1>Education</h1></div>
     <div className="js-slider-Ed-details">
-    <div className="CollegeName"> <h2>College Name: Vasantdada Patil Pratishthan's College of Engineering </h2></div>
+    <div className="CollegeName">
+       <h2>COLLEGE NAME: A.R Abdul Razzak Kalsekar </h2>
+       <h3>DEGREE PROGRAM: Diploma in Computer Engineering </h3>
+       <h3>GRADE: 9.1</h3>
+       <h3>ADAEMIC ACTIVITY: 1 Hackathons Won, Conduct Postman API WorkShop, Team Leader</h3>
+
+       </div>
      
 
     <div className="JS-imgslider">
-      <AutoSlider />
+      <AutoSlider2 />
     </div>
     
     </div>

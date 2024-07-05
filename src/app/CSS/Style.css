@@ -1512,7 +1512,15 @@ input[name="tab"]{
  
 }
 .CollegeName{
+  flex-direction: column;
+  display: flex;
   width: 150%;
+  gap: 2rem;
+  color: var(--base-text-clr);
+}
+.Js-slider-Education h1{
+  color: var(--base-text-clr);
+
 }
 .CollegeName h2 {
   font-size: 2rem;
@@ -1686,7 +1694,11 @@ figcaption {
 }
 .SliderIMG2{
   height: 100%;
-  width: 70%;
+  width: 100%;
+}
+.SliderIMG3 {
+  height: 100%;
+  width: 100%;
 }
 
 .slider_container {
@@ -1767,6 +1779,35 @@ figcaption {
 /* $$ */
 /* medies quries */
 
+
+
+
+@media screen and (max-width: 1186px) {
+  .MyTimeLine{
+    height: 250vh;
+  }
+  .js-slider-Ed-details{
+    flex-direction: column;
+  }
+  .CollegeName {
+    width: 100%;
+  }
+  .MyEducation{
+  min-height: 100vh;
+  }
+  .MyEducationContent{
+    min-height: 90vh;
+
+  }
+  .JS-imgslider{
+    width: 100%;
+
+  }
+  .slider_container{
+    width: 96%;
+  }
+
+}
 /* only for Time-Time */
 @media screen and (min-width: 768px) {
   .timeline {
@@ -1915,7 +1956,16 @@ figcaption {
     font-size:1rem;
    
   }
+  .Js-slider-Education h1{
+    font-size: 2rem;
+  }
+  .CollegeName h2{
+    font-size: 1.2rem;
+  }
 
+  .CollegeName h3{
+    font-size: 0.9rem;
+  }
  
   /* $$ */
 }
@@ -2038,8 +2088,25 @@ figcaption {
     font-size: 1.2rem;
 
   }
+
+  .Js-slider-Education h1{
+    font-size: 1.5rem;
+  }
+  .CollegeName h2{
+    font-size: 0.9rem;
+  }
+
+  .CollegeName h3{
+    font-size: 0.7rem;
+  }
+
+ 
 }
 
+@media screen and (max-width:390px){
 
+.MyTimeLine{
+  height: 300vh;
+}  
 
-
+}
